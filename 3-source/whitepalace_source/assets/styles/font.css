@@ -1,0 +1,25 @@
+﻿@font-face {
+  font-family: 'UTM Bustamalaka';
+  src: url('../fonts/UTM Bustamalaka.eot');
+  src: url('../fonts/UTM Bustamalaka.woff2') format('woff2'),
+       url('../fonts/UTM Bustamalaka.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/UTMBustamalaka.woff') format('woff'),
+       url('../fonts/UTMBustamalaka.ttf') format('truetype'),
+       url('../fonts/UTMBustamalaka.svg#UTMBustamalaka') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UTM God's Word";
+  src: url("../fonts/UTM God's WordR.eot");
+  src: url("../fonts/UTM God's WordR.woff2") format('woff2'),
+       url("../fonts/UTM God's WordR.eot?#iefix") format('embedded-opentype'),
+      url("../fonts/UTMGod'sWord.woff") format('woff'),
+       url("../fonts/UTMGod'sWord.ttf") format('truetype'),
+       url("../fonts/UTMGod'sWord.svg#UTMGod'sWord") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
