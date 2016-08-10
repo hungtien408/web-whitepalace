@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="site-sub.master.cs"
+    Inherits="site_sub" %>
+
+<%@ Register TagPrefix="uc2" TagName="bannersub" Src="~/uc/banner-sub.ascx" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="bannerdefault" runat="Server">
+    <div class="main-in">
+        <uc2:bannersub ID="bannersub1" runat="server" />
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="container">
+        <div id="site-details">
+            <a href="~/" runat="server">Trang chủ </a>/ <a href="#">Phẫu thuật thẩm mỹ</a>/
+            <span>Tạo hình khuôn mặt</span>
+        </div>
+    </div>
+    <div class="container">
+        <div id="colAside" class="desktop-992">
+            <div class="wrap-aside">
+                <div class="aside-in">
+                    <ul class="list-nav">
+                        <li>
+                            <div class="nav-box">
+                                <div class="hex-box">
+                                    <div class="corner-1">
+                                        <div class="corner-2">
+                                            <div class="corner-3">
+                                                <div class="nav-in">
+                                                    <a href="#"><span class="box-frame"></span>
+                                                        <img src="assets/images/aside-img-1.png" alt="" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav-content text-uppercase">
+                                Tạo hình mặt độn cằm V-Line
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-box">
+                                <div class="hex-box">
+                                    <div class="corner-1">
+                                        <div class="corner-2">
+                                            <div class="corner-3">
+                                                <div class="nav-in">
+                                                    <a href="#"><span class="box-frame"></span>
+                                                        <img src="assets/images/aside-img-2.png" alt="" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav-content text-uppercase">
+                                Tạo hình mặt độn cằm V-Line
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-box">
+                                <div class="hex-box">
+                                    <div class="corner-1">
+                                        <div class="corner-2">
+                                            <div class="corner-3">
+                                                <div class="nav-in">
+                                                    <a href="#"><span class="box-frame"></span>
+                                                        <img src="assets/images/aside-img-3.png" alt="" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav-content text-uppercase">
+                                Nhuộm trắng siêu tốc 360 độ
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="aside-hotline">
+                        <strong>0909 888 999</strong>
+                    </div>
+                </div>
+                <div class="aside-in">
+                    <asp:ContentPlaceHolder ID="cphColAside" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <div id="colMain">
+            <asp:ContentPlaceHolder ID="cphColMain" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="mobileAside" class="ipadmo-992">
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="imgbg" runat="Server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="contactmain" runat="Server">
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="cphOverplay" runat="Server">
+</asp:Content>

@@ -1,0 +1,661 @@
+﻿/*========================reponsite===============================================================================*/
+ .desktop-showhide, .desktop-992
+ {
+     display: block;
+ }
+ .mobile-showhide, .ipadmo-992
+ {
+     display: none;
+ }
+ .menu-sroll
+ {
+    -webkit-box-shadow: 0 3px 5px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0 3px 5px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0 3px 5px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+     position: fixed;
+     z-index: 9997;
+ }
+ /* Large desktop */
+@media (min-width: 1200px)
+{
+    .container {
+      width:1200px;  
+    } 
+}
+@media (max-width: 1200px) {
+   
+    .service-name a {
+        font-size:18px;
+    }
+    .pro-text h2 {
+        font-size:16px;
+    }
+    .nivo-caption {
+        bottom:30px;
+    }
+    /*========Diện======*/
+    .about-list ul li {
+        margin-bottom:20px;
+    }
+    
+}
+@media (max-width: 1199px)
+{
+    .mail-input {
+        display: inline-block;
+        margin-top: 60px;
+        vertical-align: top;
+        width: calc(55% - 4px);
+    }
+    .mail-text {
+        width:calc(70% - 4px);
+    }
+    .register {
+        width:calc(28% - 4px);
+    }
+    .slide-content {
+        position: relative;
+        width: 100%;
+        padding: 30px 10px;
+    }
+    .slide-right .slide-content {
+        right: 0;
+    }
+    .slide-left .slide-content {
+        left: 0;
+    }
+    .list-tab ul li {
+        width:48%;
+    }
+}
+@media (min-width: 993px) and (max-width: 1199px)
+{
+    .service-img::before {
+        width:220px;
+        height:220px;
+    }
+    .slide-box .cicle-right {
+        right: 10px;
+        bottom: 180px;
+    }
+    .slide-box .cicle-left {
+        left: 10px;
+        bottom: 195px;
+    }
+     .news-colright .news-img {
+        max-height: 104px;
+    } 
+}
+@media (min-width: 993px)
+{
+}
+@media (max-width: 992px)
+{
+    .desktop-992 {
+        display: none;
+    }
+    .ipadmo-992 {
+        display: block;
+    }
+    #header {
+        height:100px;
+    }
+     .logo-ipadmo{
+        float:left;
+       width:80%;
+    }
+     .logo-ipadmo.ipadmo-992 img {
+         width:140px;
+            margin:0 auto;
+        }
+    .menu-mo {
+        line-height:75px;
+    }
+        .menu-mo span {
+            line-height:75px;
+         }
+    .languge {
+        line-height:75px;
+    }
+    .wrapper-video .video-details {
+        border-right:none;
+        margin-bottom:20px;
+    }
+    .text-name {
+        font-size:35px;
+        line-height:40px;
+    }
+    .text-title {
+        font-size:50px;
+    }
+
+    .contact.register-bg {
+        margin:0;
+    }
+    .ser-name a {
+        font-size: 20px;
+    }
+    .ser-name span {
+        font-size: 15px;
+    }
+    #mobileAside {
+        width: 100%;
+    }
+    .wrap-aside {
+        width:100%;
+        margin: 0 auto;
+    }
+    /*#mobileAside .aside-in {
+        width: 49%;
+        padding-left: 5px;
+        float: left;
+        display: block;
+    }*/
+    #colMain {
+        padding-left: 0;
+    }
+    .title-news {
+        margin-top: 0;
+    }
+    /*==========Diện======*/
+    .main-in {
+        padding-top:100px;
+    }
+    .about-list ul li {
+        width:180px;
+        margin-right:10px;
+    }
+    .contact-main-bg {
+        margin-top:-100px;
+        background-size:cover;
+    }
+    .contact-bg {
+        padding-top: 240px;
+    }
+    .wrapper-contact {
+        border-right:none;
+        padding:0;
+    }
+   .tab-picbox .col-md-4 {
+        float: left;
+        width: 50%;
+    }
+    .list-tab ul li {
+        max-height:145px;
+    }
+    .about-tb {
+        width:60%;
+        float:right;
+        margin-right:10px;
+    }
+    .wrapper-video .video-details {
+        width:100%;
+        padding-right:0;
+    }
+    .news-colleft {
+        width:100%;
+    }
+    .list-nav {
+        background:none;
+        background-color:#e9b71f;
+    }
+        .list-nav li {
+            width:33.3%;
+        }
+        .list-nav .nav-content {
+            padding-top:10px;
+            width:87%;
+            text-align:center;
+        }
+        .list-nav .nav-box {
+            margin-left:40px;
+        }
+    .aside-hotline {
+        width:100%;
+        background-position:240px;
+        margin-right:0;
+    }
+    .news-colright {
+        padding-left:1px;
+    }
+    .news-head h4 {
+        font-size:30px;
+    }
+    .list-news .box-news, .list-cus .box-cus {
+        width:33.3%;
+        padding:5px;
+        border-bottom:none;
+    }
+    .list-news .boxa, .list-cus .boxa {
+        padding:0;
+        border:none;
+    }
+}
+/*====Diện=====*/
+@media (max-width: 850px) {
+    .fancybox-close {
+        right:70px;
+    }
+}
+@media (min-width: 769px)
+{
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 992px)
+{
+   .slide-box .cicle-right {
+        right: 10px;
+        bottom: 150px;
+    }
+    .slide-box:nth-child(3) .cicle-right {
+        bottom: 170px;
+    }
+    .slide-box .cicle-left {
+        left: 10px;
+        bottom: 150px;
+    }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px)
+{
+     .desktop-showhide
+     {
+         display: none !important;
+     }
+     .mobile-showhide
+     {
+         display: block !important;
+     }
+    .languge {
+        margin-left:0;
+        padding-left:0;
+        float:right;
+    }
+    .slide-cicle {
+        width: 100%;
+        position: relative;
+        float: none;
+        overflow: hidden;
+        height: auto;
+        display: none;
+    }
+    .slide-box .cicle-right {
+        right: 0;
+    }
+    .slide-box .cicle-left {
+        left: 0;
+    }
+    .slide-cicle .cicle, .slide-cicle .cicle:first-child, 
+    .slide-cicle .cicle:nth-child(2), .slide-cicle .cicle:nth-child(3), 
+    .slide-cicle .cicle:nth-child(4), .slide-box:nth-child(2) .slide-cicle .cicle:first-child, 
+    .slide-box:nth-child(2) .slide-cicle .cicle:nth-child(2), .slide-box:nth-child(2) .slide-cicle .cicle:nth-child(3),
+    .slide-box:nth-child(2) .slide-cicle .cicle:nth-child(4) {
+        width: 24%;
+        margin: 0 2px;
+        padding: 6px;
+    }
+    /*=====Diện=======*/
+    .about-left {
+        display:none;
+    }
+    .about-right {
+        width:100%;
+    }
+    .about-bg > p {
+        width:100%;
+        float:right;
+        margin-bottom:140px;
+    }
+    .list-tab ul li {
+        width:100%;
+        margin-right:0;
+    }
+    .tab-picture .nav > li > a {
+        font-size:17px;
+    }
+    .about-tb {
+        width:100%;
+        margin-right:0;
+        padding:0 10px;
+    }
+}
+@media (max-width: 720px) {
+    .aside-hotline {
+      background-position: 215px center;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px)
+{
+}
+@media (min-width: 640px) and (max-width: 767px)
+{
+  
+}
+@media (max-width: 690px)
+{
+    .news-bg .col-xs-3 {
+        width:50%;
+    }
+    .text-name {
+        font-size:25px;
+        padding-bottom:10px;
+        line-height:30px;
+    }
+    .text-title {
+        font-size:40px;
+        padding-bottom:10px;
+    }
+    .nivo-caption {
+        right:20px;
+    }
+    .ser-wrapper {
+        margin: 0 -15px;
+    }
+    /*=====Diện=====*/
+    .fancybox-close {
+        right:60px;
+    }
+    .list-nav .nav-box {
+      margin-left: 20px;
+    }
+   .news-colright .news-img {
+      max-height: 130px;
+    }
+}
+@media (max-width: 665px) {
+     .aside-hotline {
+      background-position:190px center;
+    }
+}
+@media (max-width: 615px)
+{
+    .service-hot .col-xs-6 {
+        width:100%;
+    }
+    .service-tb {
+    text-align: center;
+    }
+    .service-tb {
+        margin-bottom:20px;
+    }
+    .about-tb {
+        margin-left:40px;
+    }
+    /*==========Diện=======*/
+     .about-right {
+        margin-top:30px;
+    }
+    .div-title {
+        font-size:25px;
+    }
+    .tab-news .nav > li > a {
+        font-size:17px;
+    }
+    .fancybox-close {
+        right:50px;
+    }
+    .aside-hotline {
+      background-position:160px center;
+    }
+}
+@media (min-width: 479px) and (max-width: 550px)
+{
+    .list-pro .img-box {
+        width:210px;
+        height:210px;
+    }
+}
+@media (max-width: 550px) {
+    #header {
+    height: 75px;
+}
+    .logo-ipadmo.ipadmo-992 img {
+        width:100px;
+    }
+.menu-mo {
+    line-height: 50px;
+}
+    .menu-mo span {
+        line-height:50px;
+    }
+    .languge {
+    line-height: 50px;
+}
+      .text-name {
+        font-size:20px;
+        padding-bottom:10px;
+        line-height:20px;
+    }
+    .text-title {
+        font-size:30px;
+        padding-bottom:10px;
+    }
+    .slide-cicle .cicle, .slide-cicle .cicle:first-child, 
+    .slide-cicle .cicle:nth-child(2), .slide-cicle .cicle:nth-child(3), 
+    .slide-cicle .cicle:nth-child(4), .slide-box:nth-child(2) .slide-cicle .cicle:first-child, 
+    .slide-box:nth-child(2) .slide-cicle .cicle:nth-child(2), .slide-box:nth-child(2) .slide-cicle .cicle:nth-child(3),
+    .slide-box:nth-child(2) .slide-cicle .cicle:nth-child(4) {
+        width: 49%;
+        margin: 2px;
+    }
+    .ser-name a {
+        font-size: 18px;
+        top: 25%;
+    }
+    .ser-name span {
+        font-size: 14px;
+    }
+    /*==========Diện======*/
+    .main-in {
+        padding-top:75px;
+    }
+    .contact-main-bg {
+        margin-top: -125px;
+    }
+     .fancybox-close {
+        right:20px;
+    }
+    .list-nav .nav-box {
+        margin-left:5px;
+    }
+    .list-nav .nav-content {
+        float:none;
+        width:100%;
+        text-align:left;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .list-nav li {
+        width:100%;
+        display:table;
+    }
+    .aside-hotline {
+      background-position: 10px center;
+     text-align:left;
+     padding-left:55px;
+    }
+    .news-colright .news-pic {
+        width:100%;   
+    }
+    .news-colright .news-img {
+        max-height:150px;
+        height:100%;
+    }
+}
+/*=======Diện=====*/
+@media (max-width: 510px) {
+ .tab-news .nav-tabs > li.active {
+        background:none;
+        padding-left:0;
+    }
+    .tab-news .nav-tabs > li {
+        padding:10px 0 5px;
+    }
+    .tab-news .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+        color: #dea735;
+    }
+    .tab-news .nav-tabs > li.active > a {
+       border-left:2px solid #d8d8d8;
+    }
+     .tab-news .nav > li > a:hover, .nav > li > a:focus {
+    border-left:2px solid #d8d8d8;
+    }
+       .tab-news .nav > li:first-child > a {
+    border:none;
+    }
+       .fancybox-close {
+        right:0px;
+    }
+}
+/*=======*/
+@media (max-width: 480px)
+{
+    .contact.register-bg {
+        display: block;
+        width: 100%;
+        padding-bottom:10px;
+    }
+    .mail-input {
+        display: block;
+        margin-top: 0px;
+        width: 100%;
+        margin-bottom:20px;
+    }
+}
+@media (max-width: 450px)
+{
+    #header {
+    height: 55px;
+}
+    .logo-ipadmo.ipadmo-992 img {
+    width: 65px;
+}
+  .logo-ipadmo {
+    float: left;
+    width: 75%;
+}
+  .menu-mo {
+    line-height: 35px;
+}
+  .menu-mo span {
+    line-height: 35px;
+    font-size:20px;
+}  
+  .languge {
+    line-height: 35px;
+    background:none;
+}
+    .languge img {
+        width:55%;
+    }
+    .book a {
+        padding:0 3px;
+    }
+    .nivo-caption {
+    bottom: 10px;
+    }
+    .text-title {
+        padding-bottom:0;
+    }
+    .slide-cicle .cicle, .slide-cicle .cicle:first-child, 
+    .slide-cicle .cicle:nth-child(2), .slide-cicle .cicle:nth-child(3), 
+    .slide-cicle .cicle:nth-child(4), .slide-box:nth-child(2) .slide-cicle .cicle:first-child, 
+    .slide-box:nth-child(2) .slide-cicle .cicle:nth-child(2), .slide-box:nth-child(2) .slide-cicle .cicle:nth-child(3),
+    .slide-box:nth-child(2) .slide-cicle .cicle:nth-child(4) {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .ser-wrapper .col-xs-6 {
+        width: 100%;
+    }
+    /*==========Diện======*/
+    .main-in {
+        padding-top:55px;
+    }
+    .about-bg > p {
+    margin-bottom:100px;
+    }
+    .about-list ul li {
+        float:none;
+        margin: 20px auto 30px;
+    }
+    .contact-main-bg {
+        margin-top: -160px;
+    }
+    .send-form .col-xs-6 {
+        width:100%;
+    }
+    .tab-news .nav > li > a {
+        font-size:15px;
+    }
+    .fancybox-close {
+        right:45px;
+    }
+    .news-head h4 {
+      font-size: 20px;
+    }
+}
+/*==========Diện======*/
+@media (max-width: 405px) {
+     .tab-news .nav > li > a {
+    border:none;
+    }
+     .tab-news .nav-tabs > li.active > a {
+        border:none;
+    }
+     .tab-news .nav > li > a:hover, .nav > li > a:focus {
+     border:none;
+    }
+}
+@media (max-width: 400px) {
+    .about-bg > p {
+        width:100%;
+        margin-bottom:55px;
+    }
+    .list-news .box-news, .list-cus .box-cus {
+        width:100%;
+    }
+    .list-same {
+        padding:0;
+    }
+}
+@media (max-width: 360px) {
+    .fancybox-close {
+        right:30px;
+    }
+}
+@media (max-width: 340px)
+{
+    .logo-ipadmo {
+        width:70%;
+    }
+    .tab-picbox .col-md-4 {
+        float: left;
+        width: 100%;
+    }
+    .tab-news-img {
+        width:35%;
+    }
+    .contact-main-bg {
+      margin-top: -165px;
+    }
+}
+@media (max-width: 325px) {
+    .fancybox-close {
+        right:15px;
+    }
+}
+@media (max-width: 319px)
+{
+    .hotline-box {
+        padding:10px 10px 10px 90px;
+        width:265px;
+    }
+    .fancybox-close {
+        right:10px;
+    }
+    .contact-main-bg {
+      margin-top: -175px;
+    }
+
+}

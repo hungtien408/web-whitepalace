@@ -1,0 +1,329 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="site" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,500italic,700,700italic&subset=latin,vietnamese' rel='stylesheet' type='text/css' />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/ico" href="ico.ico" />
+    <link href="assets/styles/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/uniform-base.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/nivo-slider.css" rel="stylesheet" />
+    <link href="assets/styles/font.css" rel="stylesheet" />
+    <link href="assets/styles/slick.css" rel="stylesheet" />
+    <link href="assets/styles/jquery.fancybox.css" rel="stylesheet" />
+    <link href="assets/styles/jquery.bxslider.css" rel="stylesheet" />
+    <link href="assets/styles/site.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/site-repond.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/animate.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 8]>
+        <link href="assets/styles/ie7.css" rel="stylesheet" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <style type="text/css">
+            .corner
+            { 
+                behavior: url(PIE.htc); 
+            }
+            .fullbox-img, .full-boxbg
+            {
+	            -ms-behavior: url(backgroundsize.min.htc);
+	            behavior: url(backgroundsize.min.htc);
+            }
+        </style>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="assets/js/hoverIntent.js"></script>
+    <script src="assets/js/jwplayer.js"></script>
+    <script type="text/javascript">        jwplayer.key = "5qMQ1qMprX8KZ79H695ZPnH4X4zDHiI0rCXt1g==";</script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var hwin = $(window).height();
+            var hoverlay = hwin / 2;
+            var wwin = $('#overlay-scr').width();
+            var woverlay = wwin / 2;
+
+            $('.screen-with').height(hoverlay);
+            $('.screen-with').width(woverlay);
+
+            setTimeout(function () {
+                $('#overlay-scr .thumnail').animate({ opacity: 1, 'z-index': 101, })
+            }, 500);
+            setTimeout(function () {
+                $('#overlay-scr').animate({ top: '-200%', });
+            }, 1500);
+
+        });
+        </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!--active menu-->
+    <script type="text/javascript">
+        function changeActiveMenu(page) {
+            $('#menu li').removeClass("active");
+            $('#menu li a[href*="' + page + '"]').parent("li").addClass("active");
+        }
+        function changeSubActiveMenu(page) {
+            $('#menu li li').removeClass("active");
+            $('#menu li li a[href$="' + page + '"]').parents("li").addClass("active");
+            $('.menu-list li').removeClass("active");
+            $('.menu-list li a[href$="' + page + '"]').parents("li").addClass("active");
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <div id="wrapper-in">
+                <!--header-->
+                <div id="header">
+                    <div class="container">
+                        <a class="panel-a menu-mo ipadmo-992" href="#menumobile" data-position="true" data-type="false"><span class="fa fa-reorder"></span>Menu</a>
+                        <div class="logo-ipadmo ipadmo-992">
+                            <a id="A4" href="~/" runat="server">
+                                <img class="img-responsive" src="assets/images/logo-ft.png" alt="logo" /></a>
+                        </div>
+                        <div class="languge ipadmo-992">
+                            <a href="#">
+                                <img src="assets/images/languge2.png" alt="" /></a>
+                        </div>
+                        <div class="logo desktop-992">
+                            <a id="A1" href="~/" runat="server">
+                                <img class="img-responsive" src="assets/images/logo-ft.png" alt="logo" /></a>
+                        </div>
+                        <div class="header-top desktop-992">
+                            <div class="languge">
+                                <a href="#">
+                                    <img src="assets/images/languge2.png" alt="" /></a>
+                            </div>
+                            <div class="form-search corner">
+                                <asp:Button ID="Button1" CssClass="search-btn" runat="server" Text="" />
+                                <div class="search-input">
+                                    <asp:TextBox ID="TextBox1" CssClass="search-text" runat="server" placeholder="Tìm kiếm"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="header-contact"><a href="#">LIÊN HỆ</a></div>
+                            <div class="hotline">
+                                <p>HOTLINE: <span>1900 779 918 - 0933 866 661</span></p>
+                            </div>
+                            <div class="header-follow">
+                                <a href="#">
+                                    <img src="assets/images/follow1.png" alt="" /></a>
+                                <a href="#">
+                                    <img src="assets/images/follow2.png" alt="" /></a>
+                                <a href="#">
+                                    <img src="assets/images/follow3.png" alt="" /></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="wrapper-menu desktop-992">
+                            <ul id="menu">
+                                <li><a href="gioi-thieu.aspx">Giới Thiệu</a></li>
+                                <li><a href="phau-thuat-tham-my.aspx">Phẩu Thuật Thẩm Mỹ</a>
+                                    <div class="sub-menu">
+                                        <div class="sub-menubox">
+                                            <div class="menu-box">
+                                                <span>TẠO HÌNH <strong>KHUÔN MẶT</strong></span>
+                                                <div class="menu-img"><img src="assets/images/sub1.png" alt="" /></div>
+                                            </div>
+                                            <div class="list-menu">
+                                                <a href="#">Phẫu thuật khuôn mặt V-Line</a>
+                                                <a href="#">Phẫu thuật hàm Hô - Móm</a>
+                                                <a href="#">Nâng mũi S-Line</a>
+                                                <a href="#">Thu gọn cánh mũi</a>
+                                                <a href="#">Cắt mí mắt</a>
+                                                <a href="#">Chữa sụp mí mắt</a>
+                                            </div>
+                                        </div>
+                                        <div class="sub-menubox">
+                                            <div class="menu-box">
+                                                <span>TẠO HÌNH <strong>CƠ THỂ</strong></span>
+                                                <div class="menu-img"><img src="assets/images/sub2.png" alt="" /></div>
+                                            </div>
+                                            <div class="list-menu">
+                                                <a href="#">Nâng vòng ngực Y-Line</a>
+                                                <a href="#">Hồng quầng vòng 1 Petit Lad</a>
+                                                <a href="#">Hút mỡ bụng tạo eo S-Line</a>
+                                                <a href="#">Hút mỡ toàn thân</a>
+                                                <a href="#">Tạo hình mông quả táo</a>
+                                                <a href="#">Thu nhỏ - Trẻ hoá cô bé Petit Lady</a>
+                                            </div>
+                                        </div>
+                                        <div class="sub-menubox">
+                                            <div class="menu-box">
+                                                <span>CÔNG NGHỆ <strong>PHUN XĂM HIỆN ĐẠI</strong></span>
+                                                <div class="menu-img"><img src="assets/images/sub3.png" alt="" /></div>
+                                            </div>
+                                            <div class="list-menu">
+                                                <a href="#">Phun thêu chân mày 3D</a>
+                                                <a href="#">Xăm mí mắt</a>
+                                                <a href="#">Nối mi</a>
+                                                <a href="#">Phun xăm môi </a>
+                                                <a href="#">Xử lý môi thâm</a>
+                                                <a href="#">Xoá hình xăm</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="cong-nghe-moi.aspx">Công Nghệ Mới</a></li>
+                                <li><a href="tin-tuc.aspx">Tin Tức</a></li>
+                                <li><a href="hinh-anh.aspx">Hình Ảnh</a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <asp:ContentPlaceHolder ID="bannerdefault" runat="server">
+                </asp:ContentPlaceHolder>
+                <!--end header-->
+                <hr />
+                <!--main-->
+                <div id="mainContent">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--end main-->
+                <hr />
+                <asp:ContentPlaceHolder ID="imgbg" runat="server">
+                </asp:ContentPlaceHolder>
+                <div id="contact-main">
+                    <asp:ContentPlaceHolder ID="contactmain" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <!--footer-->
+                <div id="footer">
+                    <div class="container-bg">
+                        <div id="mapshow"></div>
+                        <div class="container">
+                            <div class="row ft-content">
+                                <div class="col-md-4">
+                                    <div class="copyright-bg">
+                                        <a href="#">
+                                            <img src="assets/images/logo-ft.png" alt="" /></a>
+                                        <div class="copyright">
+                                            <p>© 2016 WHITE PALACE. Allright reserved.</p>
+                                            <%--<p><a target="_blank" href="http://www.tranlegroup.com">Thiết kế web Trần Lê</a></p>--%>
+                                            <div class="follow">
+                                                <span>Follow me on</span>
+                                                <a href="#">
+                                                    <img src="assets/images/follow1.png" /></a>
+                                                <a href="#">
+                                                    <img src="assets/images/follow2.png" /></a>
+                                                <a href="#">
+                                                    <img src="assets/images/follow3.png" /></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 row">
+                                    <div class="col-md-6">
+                                        <div class="contact">
+                                            <h4>Việt Nam</h4>
+                                            <ul class="list-address">
+                                                <li><span class="fa fa-phone"></span>(+84) 907 772 777 - Hotline: 1900 779 918</li>
+                                                <li><span class="fa fa-envelope"></span><a target="_top" href="mailto:tuvan@vienthammywhitepalace.vn">tuvan@vienthammywhitepalace.vn</a></li>
+                                                <li><span class="fa fa-map-marker"></span>02 Tân Mỹ, P. Tân Phú, Q.7, Tp.HCM</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="contact">
+                                            <h4>USA</h4>
+                                            <ul class="list-address">
+                                                <li><span class="fa fa-phone"></span>+ 1(270) 999 9999</li>
+                                                <li><span class="fa fa-envelope"></span><a target="_top" href="mailto:tuvan@vienthammywhitepalace.vn">tuvan@vienthammywhitepalace.vn</a></li>
+                                                <li><span class="fa fa-map-marker"></span>495 Old Newport Blvd suite 200, CA - 92663</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="contact register-bg">
+                                            <h4>Đăng ký nhận mail</h4>
+                                            <h3>HÃY ĐĂNG KÝ NHẬN TIN NGAY</h3>
+                                            <p>Để nhận bản tin về các chương trình Khuyến Mãi hấp dẫn.</p>
+                                        </div>
+                                        <div class="mail-input">
+                                            <asp:TextBox ID="TextBox2" CssClass="mail-text" runat="server" placeholder="Nhập email của bạn"></asp:TextBox>
+                                            <div class="register"><a href="#">ĐĂNG KÝ</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end footer-->
+        </div>
+        <!--menumobile-->
+        <div id="menumobile" class="mobile-panel mobilep-left">
+            <%--<div class="close-menu"><a href="#menumobile" class="glyphicon glyphicon-remove-circle">close</a></div>--%>
+            <div class="menu-in">
+                <div class="menu-mobile">
+                    <div class="logo1">
+                        <a id="A2" href="~/" runat="server">
+                            <img class="img-responsive" src="assets/images/logo-ft.png" alt="logo" /></a>
+                    </div>
+                    <div class="header-follow">
+                        <a href="#">
+                            <img src="assets/images/follow1.png" alt="" /></a>
+                        <a href="#">
+                            <img src="assets/images/follow2.png" alt="" /></a>
+                        <a href="#">
+                            <img src="assets/images/follow3.png" alt="" /></a>
+                    </div>
+                    <div class="hotline">
+                        <p>HOTLINE: <span>0909 888 999</span></p>
+                    </div>
+                    <div class="form-search corner">
+                        <asp:Button ID="Button2" CssClass="search-btn" runat="server" Text="" />
+                        <div class="search-input">
+                            <asp:TextBox ID="TextBox3" CssClass="search-text" runat="server" placeholder="Tìm kiếm"></asp:TextBox>
+                        </div>
+                    </div>
+                    <ul id="menuMobile" class="menu-nav">
+                        <li class="home"><a id="A3" href="~/" runat="server">Trang chủ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--menumobile-->
+        <asp:ContentPlaceHolder ID="cphOverplay" runat="server">
+        </asp:ContentPlaceHolder>
+        <!--active-->
+        <div id="runScript" runat="server"></div>
+
+        <div id="updateie">
+            <div class="textup text-center">Please upgrade IE 8+, Download <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">here</a></div>
+        </div>
+        <script src="assets/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.uniform.min.js" type="text/javascript"></script>
+        <script src="assets/js/isotope.pkgd.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.panel.mobile.js" type="text/javascript"></script>
+        <script src="assets/js/superfish.js"></script>
+        <script src="assets/js/jquery.textheight.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.bgbox.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.nivo.slider.pack.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/wow.js"></script>
+        <script src="assets/js/jquery.fancybox.pack.js"></script>
+        <script src="assets/js/jquery.bxslider.min.js"></script>
+        <script src="assets/js/jquery.menu.level.js"></script>
+        <script src="assets/js/jquery.main.js"></script>
+        <script src="assets/js/jquery.inview.js"></script>
+    </form>
+</body>
+</html>
