@@ -360,7 +360,7 @@
                 </div>
             </div>
         </div>
-        <!--end footer-->
+        <%--<!--end footer-->--%>
     </div>
     <!--menumobile-->
     <div id="menumobile" class="mobile-panel mobilep-left">
@@ -401,6 +401,9 @@
                 <ul id="menuMobile" class="menu-nav">
                     <li class="home"><a id="A3" href="~/" runat="server">Trang chủ</a></li>
                 </ul>
+                <div class="contact-mobi">
+                    <a href="lien-he.aspx">LIÊN HỆ</a>
+                </div>
             </div>
         </div>
     </div>

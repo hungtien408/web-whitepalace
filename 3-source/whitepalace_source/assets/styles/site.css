@@ -1279,7 +1279,24 @@ body .mobilep-right {
 }
 
     .menu-mobile .form-search .search-text {
-        color: #000;
+        color: #fff;
+    }
+.contact-mobi {
+    width:100%;
+   padding: 7px 25px 7px 10px;
+}
+.contact-mobi:hover, .contact-mobi:active {
+     border: 2px solid #dea735;
+}
+    .contact-mobi a {
+      color: #dea735;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 4px;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration:none;
     }
 /*===========gioi-thieu=============*/
 .introduce-detail {
@@ -2792,7 +2809,7 @@ body .mobilep-right {
     text-decoration: none;
 }
     .list-menu a {
-        background: url(../images/menu-icon2.png) no-repeat left center;
+        background: url(../images/menu-icon2.png) no-repeat left 12px;
         padding-left:15px;
         line-height:30px;
         font-size:15px;
@@ -2832,5 +2849,6 @@ body .mobilep-right {
 .menu-nav .menu-box strong {
     font-weight:normal;
     font-size:15px;
+    color:#fff;
     
 }
