@@ -18,6 +18,7 @@
     <link href="assets/styles/slick.css" rel="stylesheet" />
     <link href="assets/styles/jquery.fancybox.css" rel="stylesheet" />
     <link href="assets/styles/jquery.bxslider.css" rel="stylesheet" />
+    <link href="assets/styles/owl.carousel.css" rel="stylesheet" />
     <link href="assets/styles/site.css" rel="stylesheet" type="text/css" />
     <link href="assets/styles/site-repond.css" rel="stylesheet" type="text/css" />
     <link href="assets/styles/animate.css" rel="stylesheet" />
@@ -428,6 +429,7 @@
     <script src="assets/js/jquery.fancybox.pack.js"></script>
     <script src="assets/js/jquery.bxslider.min.js"></script>
     <script src="assets/js/jquery.menu.level.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
     <script src="assets/js/jquery.main.js"></script>
     <script src="assets/js/jquery.inview.js"></script>
     </form>

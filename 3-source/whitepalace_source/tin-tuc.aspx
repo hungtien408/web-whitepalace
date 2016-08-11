@@ -17,10 +17,10 @@
                 TIN TỨC NỔI BẬT</h3>
             <div class="line-box">
                 <img src="assets/images/line-box.png" /></div>
-            <div class="slider-tree">
+            <div class="slider-tree owl-carousel">
                 <asp:ListView ID="lstNewHot" runat="server" DataSourceID="odsNewHot" EnableModelValidation="True">
                     <ItemTemplate>
-                        <div class="slide ">
+                        <div class="item ">
                             <div class="news-pic">
                                 <div class="news-img">
                                     <a href='<%# progressTitle(Eval("ProductName")) + "-tt-" + Eval("ProductID") + ".aspx" %>'>
@@ -66,10 +66,10 @@
                     </SelectParameters>
                 </asp:ObjectDataSource>
             </div>
-            <div class="control-pager">
+           <%-- <div class="control-pager">
                 <a href="#" class="slidePrevo fa fa-angle-left"></a><a href="#" class="slideNexto fa fa-angle-right">
                 </a>
-            </div>
+            </div>--%>
             <div class="news-colmain">
                 <div class="news-colleft desktop-992">
                     <ul class="list-nav">
@@ -174,7 +174,7 @@
                     <div class="clearfix">
                     </div>
                     <div class="slider-tree1">
-                        <div class="slide">
+
                             <asp:ListView ID="lstBQKD" runat="server" DataSourceID="odsBQKD" EnableModelValidation="True">
                                 <ItemTemplate>
                                     <div class="news-pic">
@@ -196,8 +196,8 @@
                             <asp:ObjectDataSource ID="odsBQKD" runat="server" SelectMethod="ProductSelectAll"
                                 TypeName="TLLib.Product">
                                 <SelectParameters>
-                                    <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
-                                    <asp:Parameter DefaultValue="4" Name="EndRowIndex" Type="String" />
+                                    <asp:Parameter Name="StartRowIndex" Type="String" />
+                                    <asp:Parameter Name="EndRowIndex" Type="String" />
                                     <asp:Parameter Name="Keyword" Type="String" />
                                     <asp:Parameter Name="ProductName" Type="String" />
                                     <asp:Parameter Name="Description" Type="String" />
@@ -220,7 +220,7 @@
                                     <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
                                 </SelectParameters>
                             </asp:ObjectDataSource>
-                        </div>
+                    
                         <%--<div class="slide ">
                             <div class="news-pic">
                                 <div class="news-img">

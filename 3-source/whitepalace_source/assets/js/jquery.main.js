@@ -89,86 +89,76 @@ function myfunload() {
             }
         }
     });
-    if ($('.slider-tree').size() > 0) {
-        $('.slider-tree').slick({
-            autoplay: true,
-            autoplaySpeed: 5000,
-            infinite: true,
-            dots: false,
-            prevArrow: $(".slidePrevo"),
-            nextArrow: $(".slideNexto"),
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            responsive: [
-              {
-                  breakpoint: 992,
-                  settings: {
-                      slidesToShow: 4,
-                      slidesToScroll: 1
-                  }
-              },
-              {
-                  breakpoint: 767,
-                  settings: {
-                      slidesToShow: 3,
-                      slidesToScroll: 1
-                  }
-              },
-              {
-                  breakpoint: 639,
-                  settings: {
-                      slidesToShow: 2,
-                      slidesToScroll: 1
-                  }
-              },
-              {
-                  breakpoint: 390,
-                  settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1
-                  }
-              }
-              // You can unslick at a given breakpoint now by adding:
-              // settings: "unslick"
-              // instead of a settings object
-            ]
-        }).textHeight({
-            activetit: true,
-            listcss: [{ cssname: ".news-img" }, { cssname: ".news-name" }],
-            wpointb: true,
-            //widthpont: 479,
-            desbool: false,
-            //listpos: [{ cssnamepos: ".description", cssheightnum: "3" }],
-            tbrow: false,
-            csstr: ".element-item",
-            max: true
+    
+    if ($('.slider-tree').size() == 1) {
+        var slidertree = $('.slider-tree').imagesLoaded(function () {
+            slidertree.owlCarousel({
+                margin: 10,
+                loop: true,
+                autoplaySpeed: 1000,
+                margin: 10,
+                nav: true,
+                dots:false,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    390: {
+                        items: 2
+                    },
+                    767: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            });
+
+            slidertree.textHeight({
+                activetit: true,
+                listcss: [{ cssname: ".news-img" }, { cssname: ".news-name" }],
+                desbool: false,
+                //listpos: [{ cssnamepos: ".description", cssheightnum: "3" }],
+                tbrow: false,
+                csstr: ".element-item",
+                max: true
+            });
         });
     }
 
-    if ($('.slider-tree1').size() > 0) {
-        $('.slider-tree1').slick({
-            autoplay: false,
-            //autoplaySpeed: 5000,
-            infinite: true,
-            dots: false,
-            prevArrow: $(".slidePrevo1"),
-            nextArrow: $(".slideNexto1"),
-            slidesToShow: 1,
-            slidesToScroll: 1,
+    //if ($('.slider-tree1').size() > 0) {
+    //    $('.slider-tree1').slick({
+    //        autoplay: false,
+    //        //autoplaySpeed: 5000,
+    //        infinite: true,
+    //        dots: false,
+    //        prevArrow: $(".slidePrevo1"),
+    //        nextArrow: $(".slideNexto1"),
+    //        slidesToShow: 2,
+    //        rows: 2,
            
-        }).textHeight({
-            activetit: true,
-            listcss: [{ cssname: ".news-img" }, { cssname: ".news-name" }],
-            wpointb: true,
-            //widthpont: 479,
-            desbool: false,
-            //listpos: [{ cssnamepos: ".description", cssheightnum: "3" }],
-            tbrow: false,
-            csstr: ".element-item",
-            max: true
-        });
-    }
-
+    //    }).textHeight({
+    //        activetit: true,
+    //        listcss: [{ cssname: ".news-img" }, { cssname: ".news-name" }],
+    //        wpointb: true,
+    //        //widthpont: 479,
+    //        desbool: false,
+    //        //listpos: [{ cssnamepos: ".description", cssheightnum: "3" }],
+    //        tbrow: false,
+    //        csstr: ".element-item",
+    //        max: true
+    //    });
+    //}
+    $('.slider-tree1').slick({
+        slidesToShow: 2,
+        rows: 2,
+        prevArrow: $(".slidePrevo1"),
+        nextArrow: $(".slideNexto1"),
+    });
    
     /*=================end============*/
     if ($('#isotopelist').size() == 1) {
