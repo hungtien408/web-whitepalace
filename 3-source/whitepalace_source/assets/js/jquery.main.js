@@ -89,7 +89,21 @@ function myfunload() {
             }
         }
     });
-    
+     if ($('.service-main').size() > 0) {
+        var servicemain = $('.service-main').imagesLoaded(function () {
+            servicemain.textHeight({
+                activetit: true,
+                listcss: [{ cssname: ".service-tb" }, { cssname: ".service-name" }],
+                wpointb: true,
+                //widthpont: 479,
+                desbool: false,
+                listpos: [{ cssnamepos: ".description", cssheightnum: "3" }],
+                tbrow: false,
+                csstr: ".element-item",
+                max: true
+            });
+        });
+    }
     if ($('.slider-tree').size() == 1) {
         var slidertree = $('.slider-tree').imagesLoaded(function () {
             slidertree.owlCarousel({

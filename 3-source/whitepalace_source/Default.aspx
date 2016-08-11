@@ -125,7 +125,7 @@
                     </p>--%>
                     <div class="line-box">
                         <img src="assets/images/line-box.png" /></div>
-                    <div class="row">
+                    <div class="service-main row">
                         <asp:ListView ID="lstServiceHot" runat="server" DataSourceID="odsServiceHot" EnableModelValidation="True">
                             <ItemTemplate>
                                 <div class="col-md-3 col-sm-6 col-xs-6 flip">

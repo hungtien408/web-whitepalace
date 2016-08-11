@@ -172,8 +172,8 @@
                                         <ItemTemplate>
                                             <div class="sub-menubox">
                                                 <div class="menu-box">
-                                                    <span><strong>
-                                                        <%# Eval("ProductCategoryName") %></strong></span>
+                                                    <span><a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'><strong>
+                                                        <%# Eval("ProductCategoryName") %></strong></a></span>
                                                     <div class="menu-img">
                                                         <a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'>
                                                             <img id="Img1" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/productcategory/menu/" + Eval("ImageNameMenu") : "~/assets/images/sub1.png" %>'

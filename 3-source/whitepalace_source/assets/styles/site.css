@@ -2352,6 +2352,7 @@ body .mobilep-right {
         list-style:none;
         width:200px;
         margin-right:11px;
+        margin-bottom:15px;
     }
         .about-list ul li p {
             text-align:center;
@@ -2761,6 +2762,10 @@ body .mobilep-right {
 }
     .menu-box strong {
         font-size:18px;
+        color: #000;
+    }
+    .menu-box a:hover {
+        text-decoration: none;
     }
 .header_scroll .sub-menu {
     top:35px;
