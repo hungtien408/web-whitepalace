@@ -22,7 +22,7 @@
                                 <ItemTemplate>
                                     <div class="wrapper-contact">
                                         <h3>
-                                            CHI NHÁNH VIỆT NAM:</h3>
+                                            TRỤ SỞ CHÍNH:</h3>
                                         <p>
                                             Địa chỉ: <%# Eval("ArticleTitle") %></p>
                                         <p>
@@ -42,7 +42,7 @@
                                         <h3>
                                             THỜI GIAN LÀM VIỆC</h3>
                                         <p>
-                                            Thứ 2 - CN: 7:00 AM - 9:00 PM (Kể cả các ngày lễ)</p>
+                                            Thứ 2 - CN: 8:00 AM - 8:00 PM (Kể cả các ngày lễ)</p>
                                         <br />
                                         <p>
                                             Hãy liên hệ chúng tôi theo địa chỉ có trên bản đồ hoặc gửi yêu cầu cho chúng tôi

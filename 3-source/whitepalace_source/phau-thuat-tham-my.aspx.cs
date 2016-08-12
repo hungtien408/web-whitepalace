@@ -11,8 +11,8 @@ public partial class phau_thuat_tham_my : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Page.Title = "Phẩu Thuật Thẩm Mỹ";
-        var meta = new HtmlMeta() { Name = "description", Content = "Phẩu Thuật Thẩm Mỹ" };
+        Page.Title = "Dịch Vụ White Palace";
+        var meta = new HtmlMeta() { Name = "description", Content = "Dịch Vụ White Palace" };
         Header.Controls.Add(meta);
     }
 

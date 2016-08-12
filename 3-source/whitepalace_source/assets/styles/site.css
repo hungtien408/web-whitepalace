@@ -102,7 +102,8 @@ hr {
     top: 0;
     padding: 10px 0;
     height: 150px;
-    position: absolute;
+    /*position: absolute;*/
+    position: relative;
     width: 100%;
     z-index: 10;
     -webkit-transition: all .2s ease;
@@ -2427,15 +2428,18 @@ body .mobilep-right {
     margin:20px 0;
 }
 .wrapper-contact {
-    padding:30px 0;
+    /*padding:30px 0;*/
+    padding: 8px 0;
     border-right:1px dashed #232323;
 }
 .contact-text .send-form {
-    padding:i0px 0;
+    padding: 10px 0;
 }
 .wrapper-contact h3 {
     font-size:18px;
     padding-bottom:10px;
+    font-family: "UTM God's Word";
+    font-weight: bold;
 }
 .wrapper-contact p {
     margin:0;

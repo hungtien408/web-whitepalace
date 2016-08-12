@@ -165,7 +165,7 @@
                     <div class="wrapper-menu desktop-992">
                         <ul id="menu">
                             <li><a href="gioi-thieu.aspx">About</a></li>
-                            <li><a href="phau-thuat-tham-my.aspx">Cosmetic Surgery</a>
+                            <li><a href="phau-thuat-tham-my.aspx">White Palace Services</a>
                                 <div class="sub-menu">
                                     <asp:ListView ID="lstPT" runat="server" DataSourceID="odsPT" EnableModelValidation="True">
                                         <ItemTemplate>

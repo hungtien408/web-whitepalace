@@ -11,8 +11,8 @@ public partial class phau_thuat_tham_my : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Page.Title = "Công Nghệ Mới";
-        var meta = new HtmlMeta() { Name = "description", Content = "Công Nghệ Mới" };
+        Page.Title = "Công Nghệ Độc Quyền";
+        var meta = new HtmlMeta() { Name = "description", Content = "Công Nghệ Độc Quyền" };
         Header.Controls.Add(meta);
     }
 

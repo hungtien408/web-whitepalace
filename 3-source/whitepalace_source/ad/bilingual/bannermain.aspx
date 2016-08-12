@@ -374,7 +374,7 @@
                                             TargetFolder="~/res/Temp/" />
                                         <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Sai định dạng ảnh (*.jpg, *.jpeg, *.gif, *.png, *.swf)"
                                             ClientValidationFunction="validateRadUpload" Display="Dynamic"></asp:CustomValidator>
-                                        <span class="required">(Kích thước 1366px x 715px)</span>
+                                        <span class="required">(Kích thước 1366px x 450px)</span>
                                     </td>
                                 </tr>
                                 <tr class="invisible">

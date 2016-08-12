@@ -11,8 +11,8 @@ public partial class phau_thuat_tham_my : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Page.Title = "Cosmetic Surgery";
-        var meta = new HtmlMeta() { Name = "description", Content = "Cosmetic Surgery" };
+        Page.Title = "White Palace Services";
+        var meta = new HtmlMeta() { Name = "description", Content = "White Palace Services" };
         Header.Controls.Add(meta);
     }
 

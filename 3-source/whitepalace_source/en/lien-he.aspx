@@ -22,32 +22,30 @@
                                 <ItemTemplate>
                                     <div class="wrapper-contact">
                                         <h3>
-                                            CHI NHÁNH VIỆT NAM:</h3>
+                                            MAIN OFFICE:</h3>
                                         <p>
-                                            Địa chỉ: <%# Eval("ArticleTitle") %></p>
+                                            Address: <%# Eval("ArticleTitle") %></p>
                                         <p>
                                             Hotline: <%# Eval("Tag") %></p>
                                         <p>
                                             Email: <a href='<%# "mailto:" + Eval("MetaDescription") %>'><%# Eval("MetaDescription") %></a></p>
                                         <br />
                                         <h3>
-                                            CHI NHÁNH USA:</h3>
+                                            BRANCH USA:</h3>
                                         <p>
-                                            Địa chỉ: <%# Eval("ArticleTitleEn") %></p>
+                                            Address: <%# Eval("ArticleTitleEn") %></p>
                                         <p>
                                             Hotline: <%# Eval("TagEn") %></p>
                                         <p>
                                             Email: <a href='<%# "mailto:" + Eval("MetaDescriptionEn") %>'><%# Eval("MetaDescriptionEn") %></a></p>
                                         <br />
                                         <h3>
-                                            THỜI GIAN LÀM VIỆC</h3>
+                                            WORK TIME</h3>
                                         <p>
-                                            Thứ 2 - CN: 7:00 AM - 9:00 PM (Kể cả các ngày lễ)</p>
+                                            Monday - Sunday: 7:00 AM - 9:00 PM (Include holiday)</p>
                                         <br />
                                         <p>
-                                            Hãy liên hệ chúng tôi theo địa chỉ có trên bản đồ hoặc gửi yêu cầu cho chúng tôi
-                                            theo mẫu form sau đây, chúng tôi sẽ trả lời sớm nhất ngay khi nhận được email của
-                                            quý khách.</p>
+                                            Please contact us for more infomation !</p>
                                     </div>
                                 </ItemTemplate>
                                 <LayoutTemplate>

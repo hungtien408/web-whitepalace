@@ -166,7 +166,7 @@
                     <div class="wrapper-menu desktop-992">
                         <ul id="menu">
                             <li><a href="gioi-thieu.aspx">Giới Thiệu</a></li>
-                            <li><a href="phau-thuat-tham-my.aspx">Phẩu Thuật Thẩm Mỹ</a>
+                            <li><a href="phau-thuat-tham-my.aspx">Dịch Vụ White Palace</a>
                                 <div class="sub-menu">
                                     <asp:ListView ID="lstPT" runat="server" DataSourceID="odsPT" EnableModelValidation="True">
                                         <ItemTemplate>
@@ -235,7 +235,7 @@
                                     </asp:ObjectDataSource>
                                 </div>
                             </li>
-                            <li><a href="cong-nghe-moi.aspx">Công Nghệ Mới</a></li>
+                            <li><a href="cong-nghe-moi.aspx">Công Nghệ Độc Quyền</a></li>
                             <li><a href="tin-tuc.aspx">Tin Tức</a></li>
                             <li><a href="hinh-anh.aspx">Hình Ảnh</a></li>
                         </ul>
