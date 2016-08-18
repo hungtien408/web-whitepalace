@@ -220,7 +220,7 @@
                                 CssClass="checkbox" />
                         </ItemTemplate>
                     </asp:GridTemplateColumn>
-                    <asp:GridTemplateColumn HeaderText="Ảnh">
+                    <asp:GridTemplateColumn HeaderText="Ảnh" Visible="False">
                         <ItemTemplate>
                             <asp:Panel ID="Panel1" runat="server" Visible='<%# string.IsNullOrEmpty( Eval("ImageName").ToString()) ? false : true %>'>
                                 <%--<a class="screenshot" rel='../../res/productcategory/<%# Eval("ImageName") %>'>
@@ -265,7 +265,7 @@
                                             <h3 class="searchTitle">
                                                 Thông Tin Danh Mục Phẩu Thuật Thẩm Mỹ</h3>
                                             <table class="search">
-                                                <tr>
+                                                <tr class="invisible">
                                                     <td class="left" valign="top">
                                                         Ảnh đại diện
                                                     </td>
@@ -292,7 +292,7 @@
                                                         <span class="required">(Kích thước 145px x 141px)</span>
                                                     </td>
                                                 </tr>
-                                                <tr class="invisible">
+                                                <tr>
                                                     <td class="left" valign="top">
                                                         Danh mục cấp trên
                                                     </td>
@@ -340,7 +340,7 @@
                                                         </asp:RadTextBox>
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <tr class="invisible">
                                                     <td class="left" valign="top">
                                                         Mô tả
                                                     </td>
@@ -390,6 +390,78 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="left" valign="top">
+                                                        Ưu điểm
+                                                    </td>
+                                                    <td>
+                                                        <asp:RadEditor ID="txtAdvantage" ContentFilters="ConvertCharactersToEntities,ConvertToXhtml,OptimizeSpans,IndentHTMLContent,ConvertFontToSpan,IECleanAnchors,FixUlBoldItalic,RemoveScripts,FixEnclosingP"
+                                                            runat="server" Language="vi-VN" Skin="Office2007" Width="98%" Content='<%# Bind("Advantage") %>'>
+                                                            <ImageManager DeletePaths="~/Uploads/Image/" UploadPaths="~/Uploads/Image/" ViewPaths="~/Uploads/Image/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <FlashManager DeletePaths="~/Uploads/Video/" UploadPaths="~/Uploads/Video/" ViewPaths="~/Uploads/Video/" />
+                                                            <DocumentManager DeletePaths="~/Uploads/File/" UploadPaths="~/Uploads/File/" ViewPaths="~/Uploads/File/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <MediaManager DeletePaths="~/Uploads/Media/" UploadPaths="~/Uploads/Media/" ViewPaths="~/Uploads/Media/" />
+                                                            <TemplateManager DeletePaths="~/Uploads/Template/" UploadPaths="~/Uploads/Template/"
+                                                                ViewPaths="~/Uploads/Template/" />
+                                                        </asp:RadEditor>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left" valign="top">
+                                                        Quy trình
+                                                    </td>
+                                                    <td>
+                                                        <asp:RadEditor ID="txtProcess" ContentFilters="ConvertCharactersToEntities,ConvertToXhtml,OptimizeSpans,IndentHTMLContent,ConvertFontToSpan,IECleanAnchors,FixUlBoldItalic,RemoveScripts,FixEnclosingP"
+                                                            runat="server" Language="vi-VN" Skin="Office2007" Width="98%" Content='<%# Bind("Process") %>'>
+                                                            <ImageManager DeletePaths="~/Uploads/Image/" UploadPaths="~/Uploads/Image/" ViewPaths="~/Uploads/Image/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <FlashManager DeletePaths="~/Uploads/Video/" UploadPaths="~/Uploads/Video/" ViewPaths="~/Uploads/Video/" />
+                                                            <DocumentManager DeletePaths="~/Uploads/File/" UploadPaths="~/Uploads/File/" ViewPaths="~/Uploads/File/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <MediaManager DeletePaths="~/Uploads/Media/" UploadPaths="~/Uploads/Media/" ViewPaths="~/Uploads/Media/" />
+                                                            <TemplateManager DeletePaths="~/Uploads/Template/" UploadPaths="~/Uploads/Template/"
+                                                                ViewPaths="~/Uploads/Template/" />
+                                                        </asp:RadEditor>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left" valign="top">
+                                                        Chăm sóc sau khi điều trị
+                                                    </td>
+                                                    <td>
+                                                        <asp:RadEditor ID="txtCSDieuTri" ContentFilters="ConvertCharactersToEntities,ConvertToXhtml,OptimizeSpans,IndentHTMLContent,ConvertFontToSpan,IECleanAnchors,FixUlBoldItalic,RemoveScripts,FixEnclosingP"
+                                                            runat="server" Language="vi-VN" Skin="Office2007" Width="98%" Content='<%# Bind("CSDieuTri") %>'>
+                                                            <ImageManager DeletePaths="~/Uploads/Image/" UploadPaths="~/Uploads/Image/" ViewPaths="~/Uploads/Image/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <FlashManager DeletePaths="~/Uploads/Video/" UploadPaths="~/Uploads/Video/" ViewPaths="~/Uploads/Video/" />
+                                                            <DocumentManager DeletePaths="~/Uploads/File/" UploadPaths="~/Uploads/File/" ViewPaths="~/Uploads/File/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <MediaManager DeletePaths="~/Uploads/Media/" UploadPaths="~/Uploads/Media/" ViewPaths="~/Uploads/Media/" />
+                                                            <TemplateManager DeletePaths="~/Uploads/Template/" UploadPaths="~/Uploads/Template/"
+                                                                ViewPaths="~/Uploads/Template/" />
+                                                        </asp:RadEditor>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left" valign="top">
+                                                        Giá
+                                                    </td>
+                                                    <td>
+                                                        <asp:RadEditor ID="txtContentPrice" ContentFilters="ConvertCharactersToEntities,ConvertToXhtml,OptimizeSpans,IndentHTMLContent,ConvertFontToSpan,IECleanAnchors,FixUlBoldItalic,RemoveScripts,FixEnclosingP"
+                                                            runat="server" Language="vi-VN" Skin="Office2007" Width="98%" Content='<%# Bind("ContentPrice") %>'>
+                                                            <ImageManager DeletePaths="~/Uploads/Image/" UploadPaths="~/Uploads/Image/" ViewPaths="~/Uploads/Image/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <FlashManager DeletePaths="~/Uploads/Video/" UploadPaths="~/Uploads/Video/" ViewPaths="~/Uploads/Video/" />
+                                                            <DocumentManager DeletePaths="~/Uploads/File/" UploadPaths="~/Uploads/File/" ViewPaths="~/Uploads/File/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <MediaManager DeletePaths="~/Uploads/Media/" UploadPaths="~/Uploads/Media/" ViewPaths="~/Uploads/Media/" />
+                                                            <TemplateManager DeletePaths="~/Uploads/Template/" UploadPaths="~/Uploads/Template/"
+                                                                ViewPaths="~/Uploads/Template/" />
+                                                        </asp:RadEditor>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td colspan="2">
                                                         <h3>
                                                             (Ngôn Ngữ Tiếng Anh)</h3>
@@ -426,7 +498,7 @@
                                                         </asp:RadTextBox>
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <tr class="invisible">
                                                     <td class="left" valign="top">
                                                         Mô tả(En)
                                                     </td>
@@ -475,6 +547,78 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="left" valign="top">
+                                                        Ưu điểm
+                                                    </td>
+                                                    <td>
+                                                        <asp:RadEditor ID="txtAdvantageEn" ContentFilters="ConvertCharactersToEntities,ConvertToXhtml,OptimizeSpans,IndentHTMLContent,ConvertFontToSpan,IECleanAnchors,FixUlBoldItalic,RemoveScripts,FixEnclosingP"
+                                                            runat="server" Language="vi-VN" Skin="Office2007" Width="98%" Content='<%# Bind("AdvantageEn") %>'>
+                                                            <ImageManager DeletePaths="~/Uploads/Image/" UploadPaths="~/Uploads/Image/" ViewPaths="~/Uploads/Image/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <FlashManager DeletePaths="~/Uploads/Video/" UploadPaths="~/Uploads/Video/" ViewPaths="~/Uploads/Video/" />
+                                                            <DocumentManager DeletePaths="~/Uploads/File/" UploadPaths="~/Uploads/File/" ViewPaths="~/Uploads/File/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <MediaManager DeletePaths="~/Uploads/Media/" UploadPaths="~/Uploads/Media/" ViewPaths="~/Uploads/Media/" />
+                                                            <TemplateManager DeletePaths="~/Uploads/Template/" UploadPaths="~/Uploads/Template/"
+                                                                ViewPaths="~/Uploads/Template/" />
+                                                        </asp:RadEditor>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left" valign="top">
+                                                        Quy trình
+                                                    </td>
+                                                    <td>
+                                                        <asp:RadEditor ID="txtProcessEn" ContentFilters="ConvertCharactersToEntities,ConvertToXhtml,OptimizeSpans,IndentHTMLContent,ConvertFontToSpan,IECleanAnchors,FixUlBoldItalic,RemoveScripts,FixEnclosingP"
+                                                            runat="server" Language="vi-VN" Skin="Office2007" Width="98%" Content='<%# Bind("ProcessEn") %>'>
+                                                            <ImageManager DeletePaths="~/Uploads/Image/" UploadPaths="~/Uploads/Image/" ViewPaths="~/Uploads/Image/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <FlashManager DeletePaths="~/Uploads/Video/" UploadPaths="~/Uploads/Video/" ViewPaths="~/Uploads/Video/" />
+                                                            <DocumentManager DeletePaths="~/Uploads/File/" UploadPaths="~/Uploads/File/" ViewPaths="~/Uploads/File/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <MediaManager DeletePaths="~/Uploads/Media/" UploadPaths="~/Uploads/Media/" ViewPaths="~/Uploads/Media/" />
+                                                            <TemplateManager DeletePaths="~/Uploads/Template/" UploadPaths="~/Uploads/Template/"
+                                                                ViewPaths="~/Uploads/Template/" />
+                                                        </asp:RadEditor>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left" valign="top">
+                                                        Chăm sóc sau khi điều trị
+                                                    </td>
+                                                    <td>
+                                                        <asp:RadEditor ID="txtCSDieuTriEn" ContentFilters="ConvertCharactersToEntities,ConvertToXhtml,OptimizeSpans,IndentHTMLContent,ConvertFontToSpan,IECleanAnchors,FixUlBoldItalic,RemoveScripts,FixEnclosingP"
+                                                            runat="server" Language="vi-VN" Skin="Office2007" Width="98%" Content='<%# Bind("CSDieuTriEn") %>'>
+                                                            <ImageManager DeletePaths="~/Uploads/Image/" UploadPaths="~/Uploads/Image/" ViewPaths="~/Uploads/Image/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <FlashManager DeletePaths="~/Uploads/Video/" UploadPaths="~/Uploads/Video/" ViewPaths="~/Uploads/Video/" />
+                                                            <DocumentManager DeletePaths="~/Uploads/File/" UploadPaths="~/Uploads/File/" ViewPaths="~/Uploads/File/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <MediaManager DeletePaths="~/Uploads/Media/" UploadPaths="~/Uploads/Media/" ViewPaths="~/Uploads/Media/" />
+                                                            <TemplateManager DeletePaths="~/Uploads/Template/" UploadPaths="~/Uploads/Template/"
+                                                                ViewPaths="~/Uploads/Template/" />
+                                                        </asp:RadEditor>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left" valign="top">
+                                                        Giá
+                                                    </td>
+                                                    <td>
+                                                        <asp:RadEditor ID="txtContentPriceEn" ContentFilters="ConvertCharactersToEntities,ConvertToXhtml,OptimizeSpans,IndentHTMLContent,ConvertFontToSpan,IECleanAnchors,FixUlBoldItalic,RemoveScripts,FixEnclosingP"
+                                                            runat="server" Language="vi-VN" Skin="Office2007" Width="98%" Content='<%# Bind("ContentPriceEn") %>'>
+                                                            <ImageManager DeletePaths="~/Uploads/Image/" UploadPaths="~/Uploads/Image/" ViewPaths="~/Uploads/Image/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <FlashManager DeletePaths="~/Uploads/Video/" UploadPaths="~/Uploads/Video/" ViewPaths="~/Uploads/Video/" />
+                                                            <DocumentManager DeletePaths="~/Uploads/File/" UploadPaths="~/Uploads/File/" ViewPaths="~/Uploads/File/"
+                                                                MaxUploadFileSize="1024000" />
+                                                            <MediaManager DeletePaths="~/Uploads/Media/" UploadPaths="~/Uploads/Media/" ViewPaths="~/Uploads/Media/" />
+                                                            <TemplateManager DeletePaths="~/Uploads/Template/" UploadPaths="~/Uploads/Template/"
+                                                                ViewPaths="~/Uploads/Template/" />
+                                                        </asp:RadEditor>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td class="left" colspan="2">
                                                         <asp:CheckBox ID="chkIsShowOnMenu" runat="server" Checked='<%# (Container is GridEditFormInsertItem) ? true : (Eval("IsShowOnMenu") == DBNull.Value ? false : Convert.ToBoolean(Eval("IsShowOnMenu"))) %>'
                                                             CssClass="checkbox" Text=" Xem trên menu" />
@@ -500,7 +644,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td valign="top">
+                                    <td valign="top" class="invisible">
                                         <div class="sub_box">
                                             <div class="head">
                                                 Ảnh sản phẩm</div>
@@ -704,10 +848,18 @@
             <asp:Parameter Name="IsShowOnMenu" Type="String" />
             <asp:Parameter Name="IsShowOnHomePage" Type="String" />
             <asp:Parameter Name="IsAvailable" Type="String" />
+            <asp:Parameter Name="Advantage" Type="String" />
+            <asp:Parameter Name="AdvantageEn" Type="String" />
+            <asp:Parameter Name="Process" Type="String" />
+            <asp:Parameter Name="ProcessEn" Type="String" />
+            <asp:Parameter Name="CSDieuTri" Type="String" />
+            <asp:Parameter Name="CSDieuTriEn" Type="String" />
+            <asp:Parameter Name="ContentPrice" Type="String" />
+            <asp:Parameter Name="ContentPriceEn" Type="String" />
         </InsertParameters>
         <SelectParameters>
             <asp:Parameter DefaultValue="3" Name="parentID" Type="Int32" />
-            <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
+            <asp:Parameter DefaultValue="2" Name="increaseLevelCount" Type="Int32" />
             <asp:Parameter Name="IsShowOnMenu" Type="String" />
             <asp:Parameter Name="IsShowOnHomePage" Type="String" />
         </SelectParameters>
@@ -730,6 +882,14 @@
             <asp:Parameter Name="IsShowOnMenu" Type="String" />
             <asp:Parameter Name="IsShowOnHomePage" Type="String" />
             <asp:Parameter Name="IsAvailable" Type="String" />
+            <asp:Parameter Name="Advantage" Type="String" />
+            <asp:Parameter Name="AdvantageEn" Type="String" />
+            <asp:Parameter Name="Process" Type="String" />
+            <asp:Parameter Name="ProcessEn" Type="String" />
+            <asp:Parameter Name="CSDieuTri" Type="String" />
+            <asp:Parameter Name="CSDieuTriEn" Type="String" />
+            <asp:Parameter Name="ContentPrice" Type="String" />
+            <asp:Parameter Name="ContentPriceEn" Type="String" />
         </UpdateParameters>
     </asp:ObjectDataSource>
     <asp:RadProgressManager ID="RadProgressManager1" runat="server" />

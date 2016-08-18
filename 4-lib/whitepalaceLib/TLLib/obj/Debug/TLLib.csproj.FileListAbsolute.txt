@@ -52,3 +52,10 @@ E:\Website\web-whitepalace\4-lib\whitepalaceLib\TLLib\bin\Debug\itextsharp.dll
 E:\Website\web-whitepalace\4-lib\whitepalaceLib\TLLib\obj\Debug\TLLib.csprojResolveAssemblyReference.cache
 E:\Website\web-whitepalace\4-lib\whitepalaceLib\TLLib\obj\Debug\TLLib.dll
 E:\Website\web-whitepalace\4-lib\whitepalaceLib\TLLib\obj\Debug\TLLib.pdb
+E:\Tien\Website\whitepalace\4-lib\whitepalaceLib\TLLib\bin\Debug\TLLib.dll
+E:\Tien\Website\whitepalace\4-lib\whitepalaceLib\TLLib\bin\Debug\TLLib.pdb
+E:\Tien\Website\whitepalace\4-lib\whitepalaceLib\TLLib\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\Tien\Website\whitepalace\4-lib\whitepalaceLib\TLLib\bin\Debug\itextsharp.dll
+E:\Tien\Website\whitepalace\4-lib\whitepalaceLib\TLLib\obj\Debug\TLLib.csprojResolveAssemblyReference.cache
+E:\Tien\Website\whitepalace\4-lib\whitepalaceLib\TLLib\obj\Debug\TLLib.dll
+E:\Tien\Website\whitepalace\4-lib\whitepalaceLib\TLLib\obj\Debug\TLLib.pdb

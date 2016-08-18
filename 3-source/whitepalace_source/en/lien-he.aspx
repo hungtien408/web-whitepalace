@@ -74,7 +74,7 @@
                             </asp:ObjectDataSource>
                         </div>
                         <div class="col-md-6">
-                            <div class="send-form shake">
+                            <div class="send-form shake contactbg">
                                 <h3>
                                     SEND REQUIRE</h3>
                                 <div class="row">

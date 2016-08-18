@@ -128,7 +128,7 @@
                     <%--<asp:RadMenuItem runat="server" Owner="RadMenu1" PostBack="False" Text="Dịch Vụ"
                         Font-Bold="True" NavigateUrl="~/ad/bilingual/services.aspx">
                     </asp:RadMenuItem>--%>
-                    <asp:RadMenuItem runat="server" Owner="RadMenu1" PostBack="False" Text="Phẩu Thuật Thẩm Mỹ"
+                    <asp:RadMenuItem runat="server" Owner="RadMenu1" PostBack="False" Text="Dịch Vụ White Palace"
                         Font-Bold="True">
                         <Items>
                             <asp:RadMenuItem runat="server" NavigateUrl="~/ad/bilingual/cosmeticsurgery.aspx" Text="Bài Viết">
@@ -140,7 +140,7 @@
                             </asp:RadMenuItem>
                         </Items>
                     </asp:RadMenuItem>
-                    <asp:RadMenuItem runat="server" Owner="RadMenu1" PostBack="False" Text="Công Nghệ Mới"
+                    <asp:RadMenuItem runat="server" Owner="RadMenu1" PostBack="False" Text="Công Nghệ Độc Quyền"
                         Font-Bold="True">
                         <Items>
                             <asp:RadMenuItem runat="server" NavigateUrl="~/ad/bilingual/newtechnology.aspx" Text="Bài Viết">
@@ -178,6 +178,9 @@
                             <asp:RadMenuItem runat="server" Text="Banner Giới Thiệu" NavigateUrl="~/ad/bilingual/bannerabout.aspx">
                             </asp:RadMenuItem>
                         </Items>
+                    </asp:RadMenuItem>
+                    <asp:RadMenuItem runat="server" Text="Popup" PostBack="False" Font-Bold="True"
+                        NavigateUrl="~/ad/bilingual/popup.aspx">
                     </asp:RadMenuItem>
                     <asp:RadMenuItem runat="server" Text="News Letter" PostBack="False" Font-Bold="True"
                         NavigateUrl="~/ad/bilingual/newsletter.aspx">

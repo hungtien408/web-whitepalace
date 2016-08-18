@@ -144,29 +144,6 @@ function myfunload() {
         });
     }
 
-    //if ($('.slider-tree1').size() > 0) {
-    //    $('.slider-tree1').slick({
-    //        autoplay: false,
-    //        //autoplaySpeed: 5000,
-    //        infinite: true,
-    //        dots: false,
-    //        prevArrow: $(".slidePrevo1"),
-    //        nextArrow: $(".slideNexto1"),
-    //        slidesToShow: 2,
-    //        rows: 2,
-           
-    //    }).textHeight({
-    //        activetit: true,
-    //        listcss: [{ cssname: ".news-img" }, { cssname: ".news-name" }],
-    //        wpointb: true,
-    //        //widthpont: 479,
-    //        desbool: false,
-    //        //listpos: [{ cssnamepos: ".description", cssheightnum: "3" }],
-    //        tbrow: false,
-    //        csstr: ".element-item",
-    //        max: true
-    //    });
-    //}
     $('.slider-tree1').slick({
         slidesToShow: 2,
         rows: 2,
@@ -365,9 +342,9 @@ function setHeigthImageOnTab() {
     }
 }
 /*===================end===============*/
-$('#menu li').hover(function () {
-    $(this).children('.sub-menu').stop(true, false, true).slideToggle(300);
-});
+//$('#menu li').hover(function () {
+//    $(this).children('.sub-menu').stop(true, false, true).slideToggle(300);
+//});
 /*========================================================================*/
 function myListTb() {
     if ($('.isotopelist').size() > 0) {
@@ -406,8 +383,74 @@ function mymap() {
 }
 function mympp() {
     $('#mapwrap').remove();
-    if ($(window).width() > 768) {
+    if ($(window).width() > 320) {
         $('#mapshow').append('<div id="mapwrap"><iframe id="iframe" src="map.aspx" frameborder="0" height="100%" width="100%"></iframe></div>');
     }
 }
+
+
+
+
 //==================
+
+//== ==//
+$('.q-list').click(function () {
+    $('.quick').addClass('quick-active');
+});
+$('.close_q').click(function () {
+    $('.quick').removeClass('quick-active');
+});
+$('.q-list').hover(function () {
+    $('.q-list').removeClass('active');
+    $(this).addClass('active');
+});
+$('.q-list-1').hover(function () {
+    $('.q-con').removeClass('show');
+    $('.q-con-1').addClass('show');
+});
+$('.q-list-2').hover(function () {
+    $('.q-con').removeClass('show');
+    $('.q-con-2').addClass('show');
+});
+//$('.q-list-3').hover(function () {
+//    $('.q-con').removeClass('show');
+//    $('.q-con-3').addClass('show');
+//});
+//$('.q-list-4').hover(function () {
+//    $('.q-con').removeClass('show');
+//    $('.q-con-4').addClass('show');
+//});
+$('.q-list-5').hover(function () {
+    $('.q-con').removeClass('show');
+    $('.q-con-5').addClass('show');
+});
+$('.q-list-6').hover(function () {
+    $('.q-con').removeClass('show');
+    $('.q-con-6').addClass('show');
+});
+//$('.q-list-7').hover(function () {
+//    $('.q-con').removeClass('show');
+//    $('.q-con-7').addClass('show');
+//});
+
+
+$('.body-popup .btn-close').click(function () {
+    $(".default-popup").fadeOut();
+    $(".body-overlay").fadeOut();
+});
+$(document).mouseup(function (e) {
+    var container = $(".body-popup");
+    var selector = $(".body-overlay");
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.fadeOut();
+        selector.fadeOut();
+    }
+});
+
+$(document).resize(function () {
+    var hgtmap = $('#mapwrap').height();
+    //alert(hgtmap)
+    $('#mapwrap .mapbg .map-wrap').height(hgtmap);
+});

@@ -9,11 +9,11 @@
                     <asp:ListView ID="lstVideo" runat="server" DataSourceID="odsVideo" EnableModelValidation="True">
                         <ItemTemplate>
                             <div class="video-details">
-                                <div id="jwplayer1">
+                                <div id="jwplayera">
                                 </div>
                                 <script type="text/javascript">
                                     $(document).ready(function () {
-                                        jwplayer('jwplayer1').setup({
+                                        jwplayer('jwplayera').setup({
                                             "image": "",
                                             file: '<%# string.IsNullOrEmpty(Eval("VideoPath").ToString()) ? Eval("GLobalEmbedScript") : "res/video/" + Eval("VideoPath") %>',
                                             flashplayer: "assets/js/jwplayer.flash.swf",

@@ -14,20 +14,20 @@ public partial class hinh_anh : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            if (((DataView)odsImageCSVC.Select()).Count <= DataPager1.PageSize)
+            //if (((DataView)odsImageCSVC.Select()).Count <= DataPager1.PageSize)
+            //{
+            //    DataPager1.Visible = false;
+            //}
+
+            if (((DataView)odsImageKH.Select()).Count <= DataPager1.PageSize)
             {
                 DataPager1.Visible = false;
             }
 
-            if (((DataView)odsImageKH.Select()).Count <= DataPager1.PageSize)
-            {
-                DataPager2.Visible = false;
-            }
-
-            if (((DataView)odsVideo.Select()).Count <= DataPager1.PageSize)
-            {
-                DataPager3.Visible = false;
-            }
+            //if (((DataView)odsVideo.Select()).Count <= DataPager1.PageSize)
+            //{
+            //    DataPager3.Visible = false;
+            //}
 
             Page.Title = "Hình Ảnh";
             var meta = new HtmlMeta() {Name = "description", Content = "Hình Ảnh"};

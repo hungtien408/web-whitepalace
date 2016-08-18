@@ -7,6 +7,8 @@
     <meta name="description" content="WP" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bannerdefault" runat="Server">
+    <div class="body-overlay">
+    </div>
     <div id="banner" class="slider-wrapper theme-default">
         <div id="slider" class="nivoSlider">
             <asp:ListView ID="lstBanner" runat="server" DataSourceID="odsBanner" EnableModelValidation="True">
@@ -285,5 +287,36 @@
         <p class="logo-wrap">
             <img class="thumnail" style="opacity: 0" src="../assets/images/logo-ft.png" width="273" />
         </p>
+    </div>
+    <div class="default-popup">
+        <div class="body-popup">
+            <asp:ListView ID="lstPopup" runat="server" DataSourceID="odsPopup" EnableModelValidation="True">
+                <ItemTemplate>
+                    <a href='<%# Eval("Website") %>' target="_blank">
+                        <img id="Img1" alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/about3.jpg" %>'
+                            runat="server" />
+                    </a>
+                </ItemTemplate>
+                <LayoutTemplate>
+                    <span runat="server" id="itemPlaceholder" />
+                </LayoutTemplate>
+            </asp:ListView>
+            <asp:ObjectDataSource ID="odsPopup" runat="server" SelectMethod="AdsBannerSelectAll"
+                TypeName="TLLib.AdsBanner">
+                <SelectParameters>
+                    <asp:Parameter Name="StartRowIndex" Type="String" />
+                    <asp:Parameter Name="EndRowIndex" Type="String" />
+                    <asp:Parameter DefaultValue="8" Name="AdsCategoryID" Type="String" />
+                    <asp:Parameter Name="CompanyName" Type="String" />
+                    <asp:Parameter Name="Website" Type="String" />
+                    <asp:Parameter Name="FromDate" Type="String" />
+                    <asp:Parameter Name="ToDate" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                    <asp:Parameter Name="Priority" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                </SelectParameters>
+            </asp:ObjectDataSource>
+            <img src="../assets/images/close.png" alt="" class="btn-close" />
+        </div>
     </div>
 </asp:Content>

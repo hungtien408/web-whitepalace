@@ -17,10 +17,10 @@
                 FEATURED NEWS</h3>
             <div class="line-box">
                 <img src="../assets/images/line-box.png" /></div>
-            <div class="slider-tree">
+            <div class="slider-tree owl-carousel">
                 <asp:ListView ID="lstNewHot" runat="server" DataSourceID="odsNewHot" EnableModelValidation="True">
                     <ItemTemplate>
-                        <div class="slide ">
+                        <div class="item">
                             <div class="news-pic">
                                 <div class="news-img">
                                     <a href='<%# progressTitle(Eval("ProductNameEn")) + "-tt-" + Eval("ProductID") + ".aspx" %>'>
@@ -65,10 +65,6 @@
                         <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
-            </div>
-            <div class="control-pager">
-                <a href="#" class="slidePrevo fa fa-angle-left"></a><a href="#" class="slideNexto fa fa-angle-right">
-                </a>
             </div>
             <div class="news-colmain">
                 <div class="news-colleft desktop-992">
@@ -174,53 +170,51 @@
                     <div class="clearfix">
                     </div>
                     <div class="slider-tree1">
-                        <div class="slide">
-                            <asp:ListView ID="lstBQKD" runat="server" DataSourceID="odsBQKD" EnableModelValidation="True">
-                                <ItemTemplate>
-                                    <div class="news-pic">
-                                        <div class="news-img">
-                                            <a href='<%# progressTitle(Eval("ProductNameEn")) + "-tt-" + Eval("ProductID") + ".aspx" %>'>
-                                                <img id="Img1" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/news1.jpg" %>'
-                                                    runat="server" /></a>
-                                        </div>
-                                        <div class="news-name">
-                                            <a href='<%# progressTitle(Eval("ProductNameEn")) + "-tt-" + Eval("ProductID") + ".aspx" %>'>
-                                                <%# Eval("ProductNameEn") %></a>
-                                        </div>
+                        <asp:ListView ID="lstBQKD" runat="server" DataSourceID="odsBQKD" EnableModelValidation="True">
+                            <ItemTemplate>
+                                <div class="news-pic">
+                                    <div class="news-img">
+                                        <a href='<%# progressTitle(Eval("ProductNameEn")) + "-tt-" + Eval("ProductID") + ".aspx" %>'>
+                                            <img id="Img1" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/news1.jpg" %>'
+                                                runat="server" /></a>
                                     </div>
-                                </ItemTemplate>
-                                <LayoutTemplate>
-                                    <span runat="server" id="itemPlaceholder" />
-                                </LayoutTemplate>
-                            </asp:ListView>
-                            <asp:ObjectDataSource ID="odsBQKD" runat="server" SelectMethod="ProductSelectAll"
-                                TypeName="TLLib.Product">
-                                <SelectParameters>
-                                    <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
-                                    <asp:Parameter DefaultValue="4" Name="EndRowIndex" Type="String" />
-                                    <asp:Parameter Name="Keyword" Type="String" />
-                                    <asp:Parameter Name="ProductName" Type="String" />
-                                    <asp:Parameter Name="Description" Type="String" />
-                                    <asp:Parameter Name="PriceFrom" Type="String" />
-                                    <asp:Parameter Name="PriceTo" Type="String" />
-                                    <asp:Parameter DefaultValue="8" Name="CategoryID" Type="String" />
-                                    <asp:Parameter Name="ManufacturerID" Type="String" />
-                                    <asp:Parameter Name="OriginID" Type="String" />
-                                    <asp:Parameter Name="Tag" Type="String" />
-                                    <asp:Parameter Name="InStock" Type="String" />
-                                    <asp:Parameter Name="IsHot" Type="String" />
-                                    <asp:Parameter Name="IsNew" Type="String" />
-                                    <asp:Parameter Name="IsBestSeller" Type="String" />
-                                    <asp:Parameter Name="IsSaleOff" Type="String" />
-                                    <asp:Parameter Name="IsShowOnHomePage" Type="String" />
-                                    <asp:Parameter Name="FromDate" Type="String" />
-                                    <asp:Parameter Name="ToDate" Type="String" />
-                                    <asp:Parameter Name="Priority" Type="String" />
-                                    <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
-                                    <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
-                                </SelectParameters>
-                            </asp:ObjectDataSource>
-                        </div>
+                                    <div class="news-name">
+                                        <a href='<%# progressTitle(Eval("ProductNameEn")) + "-tt-" + Eval("ProductID") + ".aspx" %>'>
+                                            <%# Eval("ProductNameEn") %></a>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                            <LayoutTemplate>
+                                <span runat="server" id="itemPlaceholder" />
+                            </LayoutTemplate>
+                        </asp:ListView>
+                        <asp:ObjectDataSource ID="odsBQKD" runat="server" SelectMethod="ProductSelectAll"
+                            TypeName="TLLib.Product">
+                            <SelectParameters>
+                                <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+                                <asp:Parameter DefaultValue="4" Name="EndRowIndex" Type="String" />
+                                <asp:Parameter Name="Keyword" Type="String" />
+                                <asp:Parameter Name="ProductName" Type="String" />
+                                <asp:Parameter Name="Description" Type="String" />
+                                <asp:Parameter Name="PriceFrom" Type="String" />
+                                <asp:Parameter Name="PriceTo" Type="String" />
+                                <asp:Parameter DefaultValue="8" Name="CategoryID" Type="String" />
+                                <asp:Parameter Name="ManufacturerID" Type="String" />
+                                <asp:Parameter Name="OriginID" Type="String" />
+                                <asp:Parameter Name="Tag" Type="String" />
+                                <asp:Parameter Name="InStock" Type="String" />
+                                <asp:Parameter Name="IsHot" Type="String" />
+                                <asp:Parameter Name="IsNew" Type="String" />
+                                <asp:Parameter Name="IsBestSeller" Type="String" />
+                                <asp:Parameter Name="IsSaleOff" Type="String" />
+                                <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                                <asp:Parameter Name="FromDate" Type="String" />
+                                <asp:Parameter Name="ToDate" Type="String" />
+                                <asp:Parameter Name="Priority" Type="String" />
+                                <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                                <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                            </SelectParameters>
+                        </asp:ObjectDataSource>
                         <%--<div class="slide ">
                             <div class="news-pic">
                                 <div class="news-img">

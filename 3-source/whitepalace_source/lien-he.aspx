@@ -76,7 +76,7 @@
                             </asp:ObjectDataSource>
                         </div>
                         <div class="col-md-6">
-                            <div class="send-form shake">
+                            <div class="send-form shake contactbg">
                                 <h3>
                                     GỬI YÊU CẦU</h3>
                                 <div class="row">
@@ -181,6 +181,7 @@
             </div>
         </div>
     </div>
+    <div class="map-contact"><div id="mapshow"> </div></div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="imgbg" runat="Server">
 </asp:Content>

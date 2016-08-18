@@ -2,6 +2,8 @@
     Inherits="site_sub" %>
 
 <%@ Register TagPrefix="uc2" TagName="bannersub" Src="~/uc/banner-sub.ascx" %>
+<%@ Register Src="~/uc/form-contact.ascx" TagPrefix="uc2" TagName="formcontact" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -135,6 +137,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="imgbg" runat="Server">
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="contactmain" runat="Server">
+    <uc2:formcontact runat="server" ID="formcontact" />
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="cphOverplay" runat="Server">
 </asp:Content>

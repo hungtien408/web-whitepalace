@@ -20,6 +20,19 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'SFUFuturaBook';
+  src: url('../fonts/SFUFuturaBook.woff') format('woff'),
+       url('../fonts/SFUFuturaBook.ttf') format('truetype'),
+       url('../fonts/SFUFuturaBook.svg#SFUFuturaBook') format('svg'),
+	   url('../fonts/sfufuturabook.eot'),
+	   url('../fonts/sfufuturabook.woff2') format('woff2'),
+       url('../fonts/sfufuturabook.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 
 

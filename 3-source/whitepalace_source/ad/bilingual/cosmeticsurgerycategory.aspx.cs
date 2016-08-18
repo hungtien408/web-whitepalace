@@ -162,7 +162,14 @@ public partial class ad_single_productcategory : System.Web.UI.Page
             string strIsAvailable = ((CheckBox)row.FindControl("chkIsAvailable")).Checked.ToString();
             string strIsShowOnMenu = ((CheckBox)row.FindControl("chkIsShowOnMenu")).Checked.ToString();
             string strIsShowOnHomePage = ((CheckBox)row.FindControl("chkIsShowOnHomePage")).Checked.ToString();
-
+            string strAdvantage = HttpUtility.HtmlDecode(FCKEditorFix.Fix(((RadEditor)row.FindControl("txtAdvantage")).Content.Trim()));
+            string strAdvantageEn = HttpUtility.HtmlDecode(FCKEditorFix.Fix(((RadEditor)row.FindControl("txtAdvantageEn")).Content.Trim()));
+            string strProcess = HttpUtility.HtmlDecode(FCKEditorFix.Fix(((RadEditor)row.FindControl("txtProcess")).Content.Trim()));
+            string strProcessEn = HttpUtility.HtmlDecode(FCKEditorFix.Fix(((RadEditor)row.FindControl("txtProcessEn")).Content.Trim()));
+            string strCSDieuTri = HttpUtility.HtmlDecode(FCKEditorFix.Fix(((RadEditor)row.FindControl("txtCSDieuTri")).Content.Trim()));
+            string strCSDieuTriEn = HttpUtility.HtmlDecode(FCKEditorFix.Fix(((RadEditor)row.FindControl("txtCSDieuTriEn")).Content.Trim()));
+            string strContentPrice = HttpUtility.HtmlDecode(FCKEditorFix.Fix(((RadEditor)row.FindControl("txtContentPrice")).Content.Trim()));
+            string strContentPriceEn = HttpUtility.HtmlDecode(FCKEditorFix.Fix(((RadEditor)row.FindControl("txtContentPriceEn")).Content.Trim()));
 
             var oProductCategory = new ProductCategory();
 
@@ -185,7 +192,15 @@ public partial class ad_single_productcategory : System.Web.UI.Page
                     strParentID,
                     strIsShowOnMenu,
                     strIsShowOnHomePage,
-                    strIsAvailable
+                    strIsAvailable,
+                    strAdvantage,
+                    strAdvantageEn,
+                    strProcess,
+                    strProcessEn,
+                    strCSDieuTri,
+                    strCSDieuTriEn,
+                    strContentPrice,
+                    strContentPriceEn
                 );
 
                 string ProductCategoryID = oProductCategory.ProductCategoryID;
@@ -239,6 +254,14 @@ public partial class ad_single_productcategory : System.Web.UI.Page
                 dsUpdateParam["IsShowOnMenu"].DefaultValue = strIsShowOnMenu;
                 dsUpdateParam["IsShowOnHomePage"].DefaultValue = strIsShowOnHomePage;
                 dsUpdateParam["IsAvailable"].DefaultValue = strIsAvailable;
+                dsUpdateParam["Advantage"].DefaultValue = strAdvantage;
+                dsUpdateParam["AdvantageEn"].DefaultValue = strAdvantageEn;
+                dsUpdateParam["Process"].DefaultValue = strProcess;
+                dsUpdateParam["ProcessEn"].DefaultValue = strProcessEn;
+                dsUpdateParam["CSDieuTri"].DefaultValue = strCSDieuTri;
+                dsUpdateParam["CSDieuTriEn"].DefaultValue = strCSDieuTriEn;
+                dsUpdateParam["ContentPrice"].DefaultValue = strContentPrice;
+                dsUpdateParam["ContentPriceEn"].DefaultValue = strContentPriceEn;
 
                 if (!string.IsNullOrEmpty(strImageName))
                 {

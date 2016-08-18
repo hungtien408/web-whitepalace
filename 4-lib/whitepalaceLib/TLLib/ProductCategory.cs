@@ -101,7 +101,15 @@ namespace TLLib
             string ParentID,
             string IsShowOnMenu,
             string IsShowOnHomePage,
-            string IsAvailable
+            string IsAvailable,
+            string Advantage,
+	        string AdvantageEn,
+	        string Process,
+	        string ProcessEn,
+	        string CSDieuTri,
+	        string CSDieuTriEn,
+	        string ContentPrice,
+	        string ContentPriceEn
         )
         {
             try
@@ -126,6 +134,14 @@ namespace TLLib
                 cmd.Parameters.AddWithValue("@IsShowOnMenu", string.IsNullOrEmpty(IsShowOnMenu) ? dbNULL : (object)IsShowOnMenu);
                 cmd.Parameters.AddWithValue("@IsShowOnHomePage", string.IsNullOrEmpty(IsShowOnHomePage) ? dbNULL : (object)IsShowOnHomePage);
                 cmd.Parameters.AddWithValue("@IsAvailable", string.IsNullOrEmpty(IsAvailable) ? dbNULL : (object)IsAvailable);
+                cmd.Parameters.AddWithValue("@Advantage", string.IsNullOrEmpty(Advantage) ? dbNULL : (object)Advantage);
+                cmd.Parameters.AddWithValue("@AdvantageEn", string.IsNullOrEmpty(AdvantageEn) ? dbNULL : (object)AdvantageEn);
+                cmd.Parameters.AddWithValue("@Process", string.IsNullOrEmpty(Process) ? dbNULL : (object)Process);
+                cmd.Parameters.AddWithValue("@ProcessEn", string.IsNullOrEmpty(ProcessEn) ? dbNULL : (object)ProcessEn);
+                cmd.Parameters.AddWithValue("@CSDieuTri", string.IsNullOrEmpty(CSDieuTri) ? dbNULL : (object)CSDieuTri);
+                cmd.Parameters.AddWithValue("@CSDieuTriEn", string.IsNullOrEmpty(CSDieuTriEn) ? dbNULL : (object)CSDieuTriEn);
+                cmd.Parameters.AddWithValue("@ContentPrice", string.IsNullOrEmpty(ContentPrice) ? dbNULL : (object)ContentPrice);
+                cmd.Parameters.AddWithValue("@ContentPriceEn", string.IsNullOrEmpty(ContentPriceEn) ? dbNULL : (object)ContentPriceEn);
 
                 SqlParameter imageNameParam = new SqlParameter("@OutImageName", null);
                 SqlParameter imageNameMenuParam = new SqlParameter("@OutImageNameMenu", null);
@@ -235,7 +251,15 @@ namespace TLLib
             string ParentID,
             string IsShowOnMenu,
             string IsShowOnHomePage,
-            string IsAvailable
+            string IsAvailable,
+            string Advantage,
+            string AdvantageEn,
+            string Process,
+            string ProcessEn,
+            string CSDieuTri,
+            string CSDieuTriEn,
+            string ContentPrice,
+            string ContentPriceEn
         )
         {
             try
@@ -261,6 +285,14 @@ namespace TLLib
                 cmd.Parameters.AddWithValue("@IsShowOnMenu", string.IsNullOrEmpty(IsShowOnMenu) ? dbNULL : (object)IsShowOnMenu);
                 cmd.Parameters.AddWithValue("@IsShowOnHomePage", string.IsNullOrEmpty(IsShowOnHomePage) ? dbNULL : (object)IsShowOnHomePage);
                 cmd.Parameters.AddWithValue("@IsAvailable", string.IsNullOrEmpty(IsAvailable) ? dbNULL : (object)IsAvailable);
+                cmd.Parameters.AddWithValue("@Advantage", string.IsNullOrEmpty(Advantage) ? dbNULL : (object)Advantage);
+                cmd.Parameters.AddWithValue("@AdvantageEn", string.IsNullOrEmpty(AdvantageEn) ? dbNULL : (object)AdvantageEn);
+                cmd.Parameters.AddWithValue("@Process", string.IsNullOrEmpty(Process) ? dbNULL : (object)Process);
+                cmd.Parameters.AddWithValue("@ProcessEn", string.IsNullOrEmpty(ProcessEn) ? dbNULL : (object)ProcessEn);
+                cmd.Parameters.AddWithValue("@CSDieuTri", string.IsNullOrEmpty(CSDieuTri) ? dbNULL : (object)CSDieuTri);
+                cmd.Parameters.AddWithValue("@CSDieuTriEn", string.IsNullOrEmpty(CSDieuTriEn) ? dbNULL : (object)CSDieuTriEn);
+                cmd.Parameters.AddWithValue("@ContentPrice", string.IsNullOrEmpty(ContentPrice) ? dbNULL : (object)ContentPrice);
+                cmd.Parameters.AddWithValue("@ContentPriceEn", string.IsNullOrEmpty(ContentPriceEn) ? dbNULL : (object)ContentPriceEn);
                 SqlParameter errorCodeParam = new SqlParameter("@ErrorCode", null);
                 errorCodeParam.Size = 4;
                 errorCodeParam.Direction = ParameterDirection.Output;
@@ -452,7 +484,8 @@ namespace TLLib
 
                 Common oCommon = new Common();
 
-                oCommon.RecursiveFillTree(dt, parentID, "ParentID", "ProductCategoryName", "ProductCategoryID", increaseLevelCount, IsShowOnMenu, IsShowOnHomePage);
+                //oCommon.RecursiveFillTree(dt, parentID, "ParentID", "ProductCategoryName", "ProductCategoryID", increaseLevelCount, IsShowOnMenu, IsShowOnHomePage);
+                oCommon.RecursiveFillTree2(dt, parentID, "ParentID", "ProductCategoryName", "ProductCategoryID", increaseLevelCount, IsShowOnMenu, IsShowOnHomePage, "-");
 
                 return oCommon.Tree;
             }
