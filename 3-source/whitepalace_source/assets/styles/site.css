@@ -2256,11 +2256,11 @@ body .mobilep-right {
     z-index: 10;
 }
 .aside-hotline {
-    background: url(../images/icon-phone.png) no-repeat 24px 14px;
+    background: url(../images/icon-phone.png) no-repeat 24px 24px;
     color: #b4b4b4;
     line-height: 22px;
     float: right;
-    padding: 10px 0 10px 36px;
+    padding: 0 0 0 36px;
     text-align: center;
     width: 286px;
     margin-right: 1px;
@@ -2276,6 +2276,8 @@ body .mobilep-right {
     font-weight: 600;
     top: 3px;
     left: 0;
+    width: 170px;
+    line-height: 30px;
     position: relative;
     padding-left: 5px;
     padding-top: 10px;
@@ -2638,7 +2640,7 @@ body .mobilep-right {
             list-style:none;
             width:49%;
             float:left;
-            max-height:120px;
+            /*max-height:120px;*/
             margin:10px 20px 10px 0;
             overflow:hidden;
          }

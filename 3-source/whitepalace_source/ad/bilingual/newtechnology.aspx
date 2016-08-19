@@ -720,7 +720,7 @@
                                             Display="Dynamic" ErrorMessage="Nhập tên sản phẩm" SetFocusOnError="true">*</asp:RequiredFieldValidator>--%>
                                                         </td>
                                                     </tr>
-                                                    <tr class="invisible">
+                                                    <tr>
                                                         <td class="left" valign="top">
                                                             Mô tả
                                                         </td>
@@ -815,7 +815,7 @@
                                             Display="Dynamic" ErrorMessage="Nhập tên sản phẩm" SetFocusOnError="true">*</asp:RequiredFieldValidator>--%>
                                                         </td>
                                                     </tr>
-                                                    <tr class="invisible">
+                                                    <tr>
                                                         <td class="left" valign="top">
                                                             Mô tả
                                                         </td>

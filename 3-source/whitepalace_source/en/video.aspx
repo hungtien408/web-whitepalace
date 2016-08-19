@@ -1,10 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="video.aspx.cs" Inherits="video" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/en/site.master" AutoEventWireup="true" CodeFile="video.aspx.cs" Inherits="video" %>
 
 <%@ Register Src="~/uc/banner-sub.ascx" TagPrefix="uc1" TagName="bannersub" %>
 <%@ Register Src="~/uc/form-contact.ascx" TagPrefix="uc1" TagName="formcontact" %>
-
-
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bannerdefault" Runat="Server">
@@ -36,8 +33,8 @@
                                                         $(document).ready(function () {
                                                             jwplayer('<%# "jwplayer" + Eval("VideoID") %>').setup({
                                                                 "image": "",
-                                                                file: '<%# string.IsNullOrEmpty(Eval("VideoPath").ToString()) ? Eval("GLobalEmbedScript") : "res/video/" + Eval("VideoPath") %>',
-                                                                flashplayer: "assets/js/jwplayer.flash.swf",
+                                                                file: '<%# string.IsNullOrEmpty(Eval("VideoPath").ToString()) ? Eval("GLobalEmbedScript") : "../res/video/" + Eval("VideoPath") %>',
+                                                                flashplayer: "../assets/js/jwplayer.flash.swf",
                                                                 width: '100%',
                                                                 aspectratio: '16:9'
                                                             });

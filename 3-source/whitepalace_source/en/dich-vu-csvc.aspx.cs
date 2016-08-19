@@ -23,7 +23,6 @@ public partial class dich_vu_csvc : System.Web.UI.Page
             var meta = new HtmlMeta() { Name = "description", Content = "Dịch Vụ Cơ Sở Vật Chất" };
             Header.Controls.Add(meta);
         }
-        
     }
 
     protected string progressTitle(object input)

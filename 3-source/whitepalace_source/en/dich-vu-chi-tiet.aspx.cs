@@ -32,7 +32,7 @@ public partial class dich_vu_chi_tiet : System.Web.UI.Page
             }
             else
             {
-                strTitle = strMetaTitle = "Cosmetic Surgery";
+                strTitle = strMetaTitle = "Phẫu Thuật Thẩm Mỹ";
                 strDescription = "";
                 strMetaDescription = "";
             }
@@ -43,5 +43,10 @@ public partial class dich_vu_chi_tiet : System.Web.UI.Page
             lblTitle.Text = strTitle;
             //lblTitle2.Text = strTitle;
         }
+    }
+
+    protected string progressTitle(object input)
+    {
+        return Common.ConvertTitle(input.ToString());
     }
 }

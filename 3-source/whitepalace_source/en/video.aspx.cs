@@ -14,7 +14,7 @@ public partial class video : System.Web.UI.Page
         if (!IsPostBack)
         {
             Page.Title = "Video";
-            var meta = new HtmlMeta() {Name = "description", Content = "Video"};
+            var meta = new HtmlMeta() { Name = "description", Content = "Video" };
             Header.Controls.Add(meta);
 
             if (((DataView)odsVideo.Select()).Count <= DataPager1.PageSize)

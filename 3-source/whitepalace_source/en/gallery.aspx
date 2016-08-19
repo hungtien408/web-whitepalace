@@ -3,9 +3,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="assets/styles/slick.css" rel="stylesheet" type="text/css" />
-    <script src="assets/js/jquery.js" type="text/javascript"></script>
-    <script src="assets/js/slick.min.js" type="text/javascript"></script>
+    <link href="../assets/styles/slick.css" rel="stylesheet" type="text/css" />
+    <script src="../assets/js/jquery.js" type="text/javascript"></script>
+    <script src="../assets/js/slick.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('.galleryLists .slider-for').slick({
