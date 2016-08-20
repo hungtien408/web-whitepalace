@@ -150,6 +150,7 @@ function myfunload() {
         prevArrow: $(".slidePrevo1"),
         nextArrow: $(".slideNexto1"),
     });
+    $('.scroll-pane').niceScroll({ cursorcolor: "#c2c2c2" });
    
     /*=================end============*/
     if ($('#isotopelist').size() == 1) {

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/en/site.master" AutoEventWireup="true" CodeFile="dich-vu-csvc.aspx.cs" Inherits="dich_vu_csvc" %>
 
-<%@ Register Src="~/uc/banner-sub.ascx" TagPrefix="uc1" TagName="bannersub" %>
-<%@ Register Src="~/uc/form-contact.ascx" TagPrefix="uc1" TagName="formcontact" %>
+<%@ Register Src="~/en/uc/banner-sub.ascx" TagPrefix="uc1" TagName="bannersub" %>
+<%@ Register Src="~/en/uc/form-contact.ascx" TagPrefix="uc1" TagName="formcontact" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bannerdefault" Runat="Server">

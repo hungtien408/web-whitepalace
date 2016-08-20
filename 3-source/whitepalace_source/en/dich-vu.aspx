@@ -167,5 +167,15 @@
                 <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
             </SelectParameters>
         </asp:ObjectDataSource>
+        <div class="pager">
+            <asp:DataPager ID="DataPager1" runat="server" PageSize="8" PagedControlID="lstService">
+                <Fields>
+                    <asp:NumericPagerField ButtonCount="5" NumericButtonCssClass="numer-paging" CurrentPageLabelCssClass="current" />
+                    <asp:NextPreviousPagerField ButtonType="Link" ShowLastPageButton="True" ButtonCssClass="last fa fa-angle-right"
+                        ShowNextPageButton="false" ShowPreviousPageButton="false" RenderDisabledButtonsAsLabels="true"
+                        LastPageText="" />
+                </Fields>
+            </asp:DataPager>
+        </div>
     </div>
 </asp:Content>

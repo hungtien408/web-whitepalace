@@ -226,8 +226,8 @@
                                 <%--<a class="screenshot" rel='../../res/productcategory/<%# Eval("ImageName") %>'>
                                     <img alt="" src="../assets/images/photo.png" />
                                 </a>--%>
-                                <img id="Img3" alt="" src='<%# "~/res/productcategory/" + Eval("ImageName") %>' width="200" height="80" runat="server"
-                                    visible='<%# string.IsNullOrEmpty(Eval("ImageName").ToString()) ? false : true %>' />
+                                <img id="Img3" alt="" src='<%# "~/res/productcategory/" + Eval("ImageName") %>' width="200"
+                                    height="80" runat="server" visible='<%# string.IsNullOrEmpty(Eval("ImageName").ToString()) ? false : true %>' />
                                 <asp:LinkButton ID="lnkDeleteImage" runat="server" CommandName="DeleteImage" OnClientClick="return confirm('Xóa ảnh này ?')"
                                     rel='<%#  Eval("ProductCategoryID") + "#" + Eval("ImageName") %>'>
                             <img alt="Xóa ảnh" title="Xóa ảnh" src="../assets/images/delete-icon.png" />
@@ -242,10 +242,10 @@
                                 <%--<a class="screenshot" rel='../../res/productcategory/menu/<%# Eval("ImageNameMenu") %>'>
                                     <img alt="" src="../assets/images/photo.png" />
                                 </a>--%>
-                                <img id="Img4" alt="" src='<%# "~/res/productcategory/menu/" + Eval("ImageNameMenu") %>' width="80" height="80" runat="server"
-                                    visible='<%# string.IsNullOrEmpty(Eval("ImageNameMenu").ToString()) ? false : true %>' />
-                                <asp:LinkButton ID="lnkDeleteImageMenu" runat="server" CommandName="DeleteImageMenu" OnClientClick="return confirm('Xóa ảnh này ?')"
-                                    rel='<%#  Eval("ProductCategoryID") + "#" + Eval("ImageNameMenu") %>'>
+                                <img id="Img4" alt="" src='<%# "~/res/productcategory/menu/" + Eval("ImageNameMenu") %>'
+                                    width="80" height="80" runat="server" visible='<%# string.IsNullOrEmpty(Eval("ImageNameMenu").ToString()) ? false : true %>' />
+                                <asp:LinkButton ID="lnkDeleteImageMenu" runat="server" CommandName="DeleteImageMenu"
+                                    OnClientClick="return confirm('Xóa ảnh này ?')" rel='<%#  Eval("ProductCategoryID") + "#" + Eval("ImageNameMenu") %>'>
                             <img alt="Xóa ảnh" title="Xóa ảnh" src="../assets/images/delete-icon.png" />
                                 </asp:LinkButton>
                                 <asp:HiddenField ID="hdnImageNameMenu" runat="server" Value='<%# Eval("ImageNameMenu") %>' />
@@ -264,6 +264,17 @@
                                         <div class="sub_box">
                                             <h3 class="searchTitle">
                                                 Thông Tin Danh Mục Công Nghệ Mới</h3>
+                                            <div class="edit">
+                                                <hr />
+                                                <asp:RadButton ID="lnkUpdateTop" runat="server" CommandName='<%# (Container is GridEditFormInsertItem) ? "PerformInsert" : "Update" %>'
+                                                    Text='<%# (Container is GridEditFormInsertItem) ? "Thêm" : "Cập nhật" %>'>
+                                                    <Icon PrimaryIconUrl="~/ad/assets/images/ok.png" />
+                                                </asp:RadButton>
+                                                &nbsp;&nbsp;
+                                                <asp:RadButton ID="btnCancelTop" runat="server" CommandName="Cancel" Text="Hủy">
+                                                    <Icon PrimaryIconUrl="~/ad/assets/images/cancel.png" />
+                                                </asp:RadButton>
+                                            </div>
                                             <table class="search">
                                                 <tr class="invisible">
                                                     <td class="left" valign="top">

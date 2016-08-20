@@ -188,6 +188,7 @@
                                                                 <a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'>
                                                                     <%# Eval("ProductCategoryName") %></a>
                                                                 <div class="list-menu-sub">
+                                                                    <div class="scroll-pane">
                                                                     <asp:HiddenField ID="hdnPT" runat="server" Value='<%# Eval("ProductCategoryID") %>' />
                                                                     <asp:ListView ID="lstPT" runat="server" DataSourceID="odsPT" EnableModelValidation="True">
                                                                         <ItemTemplate>
@@ -224,6 +225,7 @@
                                                                             <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
                                                                         </SelectParameters>
                                                                     </asp:ObjectDataSource>
+                                                                </div>
                                                                 </div>
                                                             </div>
                                                         </ItemTemplate>
@@ -282,6 +284,7 @@
                                                                 <a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'>
                                                                     <%# Eval("ProductCategoryName") %></a>
                                                                 <div class="list-menu-sub">
+                                                                    <div class="scroll-pane">
                                                                     <asp:HiddenField ID="hdnTechnology" runat="server" Value='<%# Eval("ProductCategoryID") %>' />
                                                                     <asp:ListView ID="lstTechnology" runat="server" DataSourceID="odsTechnology" EnableModelValidation="True">
                                                                         <ItemTemplate>
@@ -320,6 +323,7 @@
                                                                             <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
                                                                         </SelectParameters>
                                                                     </asp:ObjectDataSource>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </ItemTemplate>
@@ -359,27 +363,21 @@
                             <li><a href="javascript:void(0);">Hình Ảnh</a>
                                 <div class="sub-menu sub3">
                                     <div class="sub-menubox">
-                                        <div class="menu-box">
+                                        <div class="menu-box" style="background: url('assets/images/cosovatchat.jpg') no-repeat center center; width: 100%; height: 126px;">
                                             <span><a href="dich-vu-csvc.aspx"><strong>dịch vụ & cơ sở vật chất</strong></a></span>
-                                            <div class="menu-img">
-                                                <a href="dich-vu-csvc.aspx">
-                                                    <img src="assets/images/sub1.png" alt="" /></a></div>
                                         </div>
                                     </div>
                                     <div class="sub-menubox">
-                                        <div class="menu-box">
+                                        <div class="menu-box" style="background: url('assets/images/anhkhachhang.jpg') no-repeat center center; width: 100%; height: 126px;">
                                             <span><a href="hinh-anh.aspx"><strong>ảnh khách hàng</strong></a></span>
-                                            <div class="menu-img">
-                                                <a href="hinh-anh.aspx">
-                                                    <img src="assets/images/sub2.png" alt="" /></a></div>
                                         </div>
                                     </div>
                                     <div class="sub-menubox">
-                                        <div class="menu-box">
+                                        <div class="menu-box" style="background: url('assets/images/video.jpg') no-repeat center center; width: 100%; height: 126px;">
                                             <span><a href="video.aspx"><strong>video</strong></a></span>
-                                            <div class="menu-img">
+                                            <%--<div class="menu-img">
                                                 <a href="video.aspx">
-                                                    <img src="assets/images/sub1.png" alt="" /></a></div>
+                                                    <img src="assets/images/video.jpg" alt="" /></a></div>--%>
                                         </div>
                                     </div>
                                 </div>
@@ -580,6 +578,7 @@
     <script src="assets/js/jquery.fancybox.pack.js"></script>
     <script src="assets/js/jquery.bxslider.min.js"></script>
     <script src="assets/js/jquery.menu.level.js"></script>
+    <script src="assets/js/nicescroll.min.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
     <script src="assets/js/jquery.main.js"></script>
     <script src="assets/js/jquery.inview.js"></script>

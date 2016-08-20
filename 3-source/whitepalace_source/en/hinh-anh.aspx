@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/en/site.master" AutoEventWireup="true"
     CodeFile="hinh-anh.aspx.cs" Inherits="hinh_anh" %>
 
-<%@ Register Src="~/uc/form-contact.ascx" TagPrefix="uc1" TagName="formcontact" %>
+<%@ Register Src="~/en/uc/form-contact.ascx" TagPrefix="uc1" TagName="formcontact" %>
 <%@ Register TagPrefix="uc2" TagName="bannersub" Src="~/uc/banner-sub.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

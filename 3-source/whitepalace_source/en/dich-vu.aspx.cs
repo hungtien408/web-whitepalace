@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,6 +14,11 @@ public partial class dich_vu : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+            if (((DataView)odsService.Select()).Count <= DataPager1.PageSize)
+            {
+                DataPager1.Visible = false;
+            }
+
             string strTitle, strDescription, strMetaTitle, strMetaDescription;
             if (!string.IsNullOrEmpty(Request.QueryString["pci"]))
             {

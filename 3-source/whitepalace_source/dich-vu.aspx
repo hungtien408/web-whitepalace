@@ -8,24 +8,23 @@
         <a id="A1" href="~/" runat="server">Trang chủ </a>/ <a href="phau-thuat-tham-my.aspx">
             Phẫu thuật thẩm mỹ</a>/ <span>Mắt</span>
             </div>--%>
-        <asp:ListView ID="lstBreadcrum" runat="server" DataSourceID="odsBreadcrum" EnableModelValidation="True">
-            <ItemTemplate>
-                <%# Container.DataItemIndex == ((System.Data.DataView)odsBreadcrum.Select()).Count - 1 ? "<span>" + Eval("ProductCategoryName") + "</span>" : "<a href='" + progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" + "'>" + Eval("ProductCategoryName") + "</a>/ "%>
-            </ItemTemplate>
-            <LayoutTemplate>
-                <div id="site-details">
-                    <a id="A1" href="~/" runat="server">Trang chủ</a>/ <span runat="server" id="itemPlaceholder" />
-                </div>
-            </LayoutTemplate>
-        </asp:ListView>
-        <asp:ObjectDataSource ID="odsBreadcrum" runat="server" SelectMethod="ProductCategoryHierarchyToTopSelectAll"
-            TypeName="TLLib.ProductCategory">
-            <SelectParameters>
-                <asp:QueryStringParameter Name="CurrentProductCategoryID" QueryStringField="pci"
-                    Type="String" />
-            </SelectParameters>
-        </asp:ObjectDataSource>
-    
+    <asp:ListView ID="lstBreadcrum" runat="server" DataSourceID="odsBreadcrum" EnableModelValidation="True">
+        <ItemTemplate>
+            <%# Container.DataItemIndex == ((System.Data.DataView)odsBreadcrum.Select()).Count - 1 ? "<span>" + Eval("ProductCategoryName") + "</span>" : "<a href='" + progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" + "'>" + Eval("ProductCategoryName") + "</a>/ "%>
+        </ItemTemplate>
+        <LayoutTemplate>
+            <div id="site-details">
+                <a id="A1" href="~/" runat="server">Trang chủ</a>/ <span runat="server" id="itemPlaceholder" />
+            </div>
+        </LayoutTemplate>
+    </asp:ListView>
+    <asp:ObjectDataSource ID="odsBreadcrum" runat="server" SelectMethod="ProductCategoryHierarchyToTopSelectAll"
+        TypeName="TLLib.ProductCategory">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="CurrentProductCategoryID" QueryStringField="pci"
+                Type="String" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphColAside" runat="Server">
 </asp:Content>
@@ -167,5 +166,15 @@
                 <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
             </SelectParameters>
         </asp:ObjectDataSource>
+        <div class="pager">
+            <asp:DataPager ID="DataPager1" runat="server" PageSize="8" PagedControlID="lstService">
+                <Fields>
+                    <asp:NumericPagerField ButtonCount="5" NumericButtonCssClass="numer-paging" CurrentPageLabelCssClass="current" />
+                    <asp:NextPreviousPagerField ButtonType="Link" ShowLastPageButton="True" ButtonCssClass="last fa fa-angle-right"
+                        ShowNextPageButton="false" ShowPreviousPageButton="false" RenderDisabledButtonsAsLabels="true"
+                        LastPageText="" />
+                </Fields>
+            </asp:DataPager>
+        </div>
     </div>
 </asp:Content>
