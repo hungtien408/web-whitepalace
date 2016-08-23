@@ -131,9 +131,9 @@ hr {
 }
 
 .languge {
-    background: url(../images/bg-languge.png) no-repeat left center;
+    /*background: url(../images/bg-languge.png) no-repeat left center;*/
     float: right;
-    padding-left: 40px;
+    /*padding-left: 40px;*/
     margin-left: 10px;
 }
 
@@ -1552,11 +1552,11 @@ body .mobilep-right {
     width: 100%;
 }
 .wrapper-video .video-details {
-  height: 230px;
+  /*height: 230px;*/
   margin: 60px auto 0;
   overflow: hidden;
   vertical-align: top;
-  width: 60%;
+  width: 70%;
 }
 
     /*.wrapper-video .video-details {
@@ -2574,7 +2574,7 @@ body .mobilep-right {
     overflow:hidden;
     position:relative;
     z-index:1;
-    background-color:#000;
+    /*background-color:#000;*/
 }
     .pic-img img {
         width:100%;
@@ -2906,6 +2906,14 @@ body .mobilep-right {
 .menu-nav .sub-menubox {
     width:100%;
 }
+.menu-nav .list-menu-sub {
+    display:block;
+}
+.menu-nav .sub3 .sub-menubox .menu-box {
+    background:none !important;
+    height:auto !important;
+    width:100%;
+}
 .menu-nav .menu-box .menu-img {
     display:none;
 }
@@ -2931,17 +2939,113 @@ body .mobilep-right {
 .about-list .tb-img {
     margin:0 auto;
 }
-.list-menu-sub {
+/*.list-menu-sub {
+  background-color: rgba(136, 106, 50, 1);
+  display: none;
   padding-left: 15px;
-  display:none;
+  position: absolute;
+  left:100%;
+  top: 0;
+  z-index:2;
+}*/
+.sub-menubox:nth-of-type(1) .list-menu-sub {
+    width:333%;
+     background-color: rgba(136, 106, 50, 1);
+  display: none;
+  padding-left: 15px;
+  position: absolute;
+  left:100%;
+  top: 0;
+  z-index:2;
+}
+.sub-menubox:nth-of-type(1) .list-menu-sub a{
+    width:33.3%;
+    float:left;
+}
+.sub-menubox:nth-of-type(2) .list-menu-sub {
+    width:227%;
+  background-color: rgba(136, 106, 50, 1);
+  display: none;
+  padding-left: 15px;
+  position: absolute;
+  left:100%;
+  top: 0;
+  z-index:2;
+    /*display:block;*/
+}
+.sub-menubox:nth-of-type(2) .list-menu-sub a{
+    width:49.4%;
+    float:left;
+}
+.sub-menubox:nth-of-type(3) .list-menu-sub {
+  background-color: rgba(136, 106, 50, 1);
+  display: none;
+  padding-left: 15px;
+  position: absolute;
+  right:100%;
+  top: 0;
+  z-index:2;
+  width:220%;
+}
+.sub-menubox:nth-of-type(3) .list-menu-sub a{
+    width:49.4%;
+    float:left;
+}
+.sub-menubox:nth-of-type(4) .list-menu-sub {
+  background-color: rgba(136, 106, 50, 1);
+  display: none;
+  padding-left: 15px;
+  position: absolute;
+  right:100%;
+  top: 0;
+  z-index:2;
+  width:333%;
+  /*display:block;*/
+}
+.sub-menubox:nth-of-type(4) .list-menu-sub a{
+    width:33.3%;
+    float:left;
+}
+.sub2-list:nth-of-type(1) .list-menu-sub {
+  width:110%;
+  background-color: rgba(136, 106, 50, 1);
+  display: none;
+  padding-left: 15px;
+  position: absolute;
+  right:100%;
+  top: 0;
+  z-index:2;
+}
+.sub2-list:nth-of-type(1) .list-menu-sub a{
+    width:100%;
+    float:left;
+}
+.sub2-list:nth-of-type(2) .list-menu-sub {
+  width:110%;
+  background-color: rgba(136, 106, 50, 1);
+  display: none;
+  padding-left: 15px;
+  position: absolute;
+  right:100%;
+  top: 0;
+  left:auto;
+  z-index:2;
+}
+.sub2-list:nth-of-type(2) .list-menu-sub a{
+    width:100%;
+    float:left;
+}
+.list-menu2 {
+    position:relative;
 }
 .sub2 {
     left: -220px !important;
     width: 600px;
 }
 .sub-menu.sub3 {
-    left:-180px !important;
-    width:300px;
+  left: -120px !important;
+  width: 220px;
+  padding:10px;
 }
 /*.sub-menu.sub3 .menu-box {
   background: none;
@@ -2951,14 +3055,14 @@ body .mobilep-right {
 }
 .sub3 .sub-menubox {
     width:100%;
-    margin:10px 0;
+    margin:5px 0;
 }
 #menu li:hover > .sub-menu {
     display:block;
 }
-.list-menu-sub {
+/*.list-menu-sub {
     position: static;
-}
+}*/
 .list-menu2:hover .list-menu-sub {
     display:block;
 }
@@ -2974,10 +3078,13 @@ body .mobilep-right {
 .list-menu a:hover {
     color:#dea735 !important;
 }
+.goog-te-gadget, .goog-logo-link,.goog-logo-link:link {
+font-size: 0 !important;
+}
 
-
-
-
+.goog-te-gadget img {
+    display: none;
+}
 
 .quick {
     position:absolute;
@@ -3125,6 +3232,6 @@ body .mobilep-right {
     cursor:pointer;
 }
 .scroll-pane {
-  height: 120px;
+  height: 400px;
   overflow: auto;
 }

@@ -114,8 +114,16 @@
                                         <img src="../assets/images/follow3.png" alt="" /></a>
                         </div>
                         <div class="languge">
-                            <asp:ImageButton ID="btnVN2" runat="server" ImageUrl="~/assets/images/languge1.png"
-                                OnClick="btnVN_Click" />
+                            <div id="google_translate_element">
+                            </div>
+                            <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({ pageLanguage: 'vi' }, 'google_translate_element');
+                                }
+                            </script>
+                            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            <%--<asp:ImageButton ID="btnVN2" runat="server" ImageUrl="~/assets/images/languge1.png"
+                                OnClick="btnVN_Click" />--%>
                         </div>
                         <div class="form-search corner">
                             <asp:Button ID="btnSearch" CssClass="search-btn" runat="server" OnClick="btnSearch_Click" />
@@ -166,7 +174,7 @@
                     <div class="wrapper-menu desktop-992">
                         <ul id="menu">
                             <li><a href="gioi-thieu.aspx">About</a></li>
-                            <li><a href="phau-thuat-tham-my.aspx">White Palace Services</a>
+                            <li><a href="javascript:void(0);">White Palace Services</a>
                                 <div class="sub-menu">
                                     <asp:ListView ID="lstPTCategory" runat="server" DataSourceID="odsPTCategory" EnableModelValidation="True">
                                         <ItemTemplate>
@@ -189,44 +197,44 @@
                                                                     <%# Eval("ProductCategoryNameEn") %></a>
                                                                 <div class="list-menu-sub">
                                                                     <div class="scroll-pane">
-                                                                    <asp:HiddenField ID="hdnPT" runat="server" Value='<%# Eval("ProductCategoryID") %>' />
-                                                                    <asp:ListView ID="lstPT" runat="server" DataSourceID="odsPT" EnableModelValidation="True">
-                                                                        <ItemTemplate>
-                                                                            <a href='<%# progressTitle(Eval("ProductNameEn")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
-                                                                                <%# Eval("ProductNameEn") %></a>
-                                                                        </ItemTemplate>
-                                                                        <LayoutTemplate>
-                                                                            <span runat="server" id="itemPlaceholder" />
-                                                                        </LayoutTemplate>
-                                                                    </asp:ListView>
-                                                                    <asp:ObjectDataSource ID="odsPT" runat="server" SelectMethod="ProductSelectAll" TypeName="TLLib.Product">
-                                                                        <SelectParameters>
-                                                                            <asp:Parameter Name="StartRowIndex" Type="String" />
-                                                                            <asp:Parameter Name="EndRowIndex" Type="String" />
-                                                                            <asp:Parameter Name="Keyword" Type="String" />
-                                                                            <asp:Parameter Name="ProductName" Type="String" />
-                                                                            <asp:Parameter Name="Description" Type="String" />
-                                                                            <asp:Parameter Name="PriceFrom" Type="String" />
-                                                                            <asp:Parameter Name="PriceTo" Type="String" />
-                                                                            <asp:ControlParameter ControlID="hdnPT" Name="CategoryID" PropertyName="Value" Type="String" />
-                                                                            <asp:Parameter Name="ManufacturerID" Type="String" />
-                                                                            <asp:Parameter Name="OriginID" Type="String" />
-                                                                            <asp:Parameter Name="Tag" Type="String" />
-                                                                            <asp:Parameter DefaultValue="True" Name="InStock" Type="String" />
-                                                                            <asp:Parameter Name="IsHot" Type="String" />
-                                                                            <asp:Parameter Name="IsNew" Type="String" />
-                                                                            <asp:Parameter Name="IsBestSeller" Type="String" />
-                                                                            <asp:Parameter Name="IsSaleOff" Type="String" />
-                                                                            <asp:Parameter Name="IsShowOnHomePage" Type="String" />
-                                                                            <asp:Parameter Name="FromDate" Type="String" />
-                                                                            <asp:Parameter Name="ToDate" Type="String" />
-                                                                            <asp:Parameter Name="Priority" Type="String" />
-                                                                            <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
-                                                                            <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
-                                                                        </SelectParameters>
-                                                                    </asp:ObjectDataSource>
+                                                                        <asp:HiddenField ID="hdnPT" runat="server" Value='<%# Eval("ProductCategoryID") %>' />
+                                                                        <asp:ListView ID="lstPT" runat="server" DataSourceID="odsPT" EnableModelValidation="True">
+                                                                            <ItemTemplate>
+                                                                                <a href='<%# progressTitle(Eval("ProductNameEn")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
+                                                                                    <%# Eval("ProductNameEn") %></a>
+                                                                            </ItemTemplate>
+                                                                            <LayoutTemplate>
+                                                                                <span runat="server" id="itemPlaceholder" />
+                                                                            </LayoutTemplate>
+                                                                        </asp:ListView>
+                                                                        <asp:ObjectDataSource ID="odsPT" runat="server" SelectMethod="ProductSelectAll" TypeName="TLLib.Product">
+                                                                            <SelectParameters>
+                                                                                <asp:Parameter Name="StartRowIndex" Type="String" />
+                                                                                <asp:Parameter Name="EndRowIndex" Type="String" />
+                                                                                <asp:Parameter Name="Keyword" Type="String" />
+                                                                                <asp:Parameter Name="ProductName" Type="String" />
+                                                                                <asp:Parameter Name="Description" Type="String" />
+                                                                                <asp:Parameter Name="PriceFrom" Type="String" />
+                                                                                <asp:Parameter Name="PriceTo" Type="String" />
+                                                                                <asp:ControlParameter ControlID="hdnPT" Name="CategoryID" PropertyName="Value" Type="String" />
+                                                                                <asp:Parameter Name="ManufacturerID" Type="String" />
+                                                                                <asp:Parameter Name="OriginID" Type="String" />
+                                                                                <asp:Parameter Name="Tag" Type="String" />
+                                                                                <asp:Parameter DefaultValue="True" Name="InStock" Type="String" />
+                                                                                <asp:Parameter Name="IsHot" Type="String" />
+                                                                                <asp:Parameter Name="IsNew" Type="String" />
+                                                                                <asp:Parameter Name="IsBestSeller" Type="String" />
+                                                                                <asp:Parameter Name="IsSaleOff" Type="String" />
+                                                                                <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                                                                                <asp:Parameter Name="FromDate" Type="String" />
+                                                                                <asp:Parameter Name="ToDate" Type="String" />
+                                                                                <asp:Parameter Name="Priority" Type="String" />
+                                                                                <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                                                                                <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                                                                            </SelectParameters>
+                                                                        </asp:ObjectDataSource>
+                                                                    </div>
                                                                 </div>
-                                                               </div>
                                                             </div>
                                                         </ItemTemplate>
                                                         <LayoutTemplate>
@@ -261,12 +269,12 @@
                                     </asp:ObjectDataSource>
                                 </div>
                             </li>
-                            <li><a href="cong-nghe-moi.aspx">New Technology</a>
+                            <li><a href="javascript:void(0);">New Technology</a>
                                 <div class="sub-menu sub2">
                                     <asp:ListView ID="lstTechnologyCategory" runat="server" DataSourceID="odsTechnologyCategory"
                                         EnableModelValidation="True">
                                         <ItemTemplate>
-                                            <div class="sub-menubox">
+                                            <div class="sub-menubox sub2-list">
                                                 <div class="menu-box">
                                                     <span><a href="javascript:void(0);"><strong>
                                                         <%# Eval("ProductCategoryNameEn") %></strong></a></span>
@@ -285,44 +293,44 @@
                                                                     <%# Eval("ProductCategoryNameEn") %></a>
                                                                 <div class="list-menu-sub">
                                                                     <div class="scroll-pane">
-                                                                    <asp:HiddenField ID="hdnTechnology" runat="server" Value='<%# Eval("ProductCategoryID") %>' />
-                                                                    <asp:ListView ID="lstTechnology" runat="server" DataSourceID="odsTechnology" EnableModelValidation="True">
-                                                                        <ItemTemplate>
-                                                                            <a href='<%# progressTitle(Eval("ProductNameEn")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
-                                                                                <%# Eval("ProductNameEn") %></a>
-                                                                        </ItemTemplate>
-                                                                        <LayoutTemplate>
-                                                                            <span runat="server" id="itemPlaceholder" />
-                                                                        </LayoutTemplate>
-                                                                    </asp:ListView>
-                                                                    <asp:ObjectDataSource ID="odsTechnology" runat="server" SelectMethod="ProductSelectAll"
-                                                                        TypeName="TLLib.Product">
-                                                                        <SelectParameters>
-                                                                            <asp:Parameter Name="StartRowIndex" Type="String" />
-                                                                            <asp:Parameter Name="EndRowIndex" Type="String" />
-                                                                            <asp:Parameter Name="Keyword" Type="String" />
-                                                                            <asp:Parameter Name="ProductName" Type="String" />
-                                                                            <asp:Parameter Name="Description" Type="String" />
-                                                                            <asp:Parameter Name="PriceFrom" Type="String" />
-                                                                            <asp:Parameter Name="PriceTo" Type="String" />
-                                                                            <asp:ControlParameter ControlID="hdnTechnology" Name="CategoryID" PropertyName="Value"
-                                                                                Type="String" />
-                                                                            <asp:Parameter Name="ManufacturerID" Type="String" />
-                                                                            <asp:Parameter Name="OriginID" Type="String" />
-                                                                            <asp:Parameter Name="Tag" Type="String" />
-                                                                            <asp:Parameter DefaultValue="True" Name="InStock" Type="String" />
-                                                                            <asp:Parameter Name="IsHot" Type="String" />
-                                                                            <asp:Parameter Name="IsNew" Type="String" />
-                                                                            <asp:Parameter Name="IsBestSeller" Type="String" />
-                                                                            <asp:Parameter Name="IsSaleOff" Type="String" />
-                                                                            <asp:Parameter Name="IsShowOnHomePage" Type="String" />
-                                                                            <asp:Parameter Name="FromDate" Type="String" />
-                                                                            <asp:Parameter Name="ToDate" Type="String" />
-                                                                            <asp:Parameter Name="Priority" Type="String" />
-                                                                            <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
-                                                                            <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
-                                                                        </SelectParameters>
-                                                                    </asp:ObjectDataSource>
+                                                                        <asp:HiddenField ID="hdnTechnology" runat="server" Value='<%# Eval("ProductCategoryID") %>' />
+                                                                        <asp:ListView ID="lstTechnology" runat="server" DataSourceID="odsTechnology" EnableModelValidation="True">
+                                                                            <ItemTemplate>
+                                                                                <a href='<%# progressTitle(Eval("ProductNameEn")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
+                                                                                    <%# Eval("ProductNameEn") %></a>
+                                                                            </ItemTemplate>
+                                                                            <LayoutTemplate>
+                                                                                <span runat="server" id="itemPlaceholder" />
+                                                                            </LayoutTemplate>
+                                                                        </asp:ListView>
+                                                                        <asp:ObjectDataSource ID="odsTechnology" runat="server" SelectMethod="ProductSelectAll"
+                                                                            TypeName="TLLib.Product">
+                                                                            <SelectParameters>
+                                                                                <asp:Parameter Name="StartRowIndex" Type="String" />
+                                                                                <asp:Parameter Name="EndRowIndex" Type="String" />
+                                                                                <asp:Parameter Name="Keyword" Type="String" />
+                                                                                <asp:Parameter Name="ProductName" Type="String" />
+                                                                                <asp:Parameter Name="Description" Type="String" />
+                                                                                <asp:Parameter Name="PriceFrom" Type="String" />
+                                                                                <asp:Parameter Name="PriceTo" Type="String" />
+                                                                                <asp:ControlParameter ControlID="hdnTechnology" Name="CategoryID" PropertyName="Value"
+                                                                                    Type="String" />
+                                                                                <asp:Parameter Name="ManufacturerID" Type="String" />
+                                                                                <asp:Parameter Name="OriginID" Type="String" />
+                                                                                <asp:Parameter Name="Tag" Type="String" />
+                                                                                <asp:Parameter DefaultValue="True" Name="InStock" Type="String" />
+                                                                                <asp:Parameter Name="IsHot" Type="String" />
+                                                                                <asp:Parameter Name="IsNew" Type="String" />
+                                                                                <asp:Parameter Name="IsBestSeller" Type="String" />
+                                                                                <asp:Parameter Name="IsSaleOff" Type="String" />
+                                                                                <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                                                                                <asp:Parameter Name="FromDate" Type="String" />
+                                                                                <asp:Parameter Name="ToDate" Type="String" />
+                                                                                <asp:Parameter Name="Priority" Type="String" />
+                                                                                <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                                                                                <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                                                                            </SelectParameters>
+                                                                        </asp:ObjectDataSource>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -363,17 +371,20 @@
                             <li><a href="hinh-anh.aspx">Images</a>
                                 <div class="sub-menu sub3">
                                     <div class="sub-menubox">
-                                        <div class="menu-box" style="background: url('../assets/images/cosovatchat.jpg') no-repeat center center; width: 100%; height: 126px;">
+                                        <div class="menu-box" style="background: url('../assets/images/cosovatchat.jpg') no-repeat center center;
+                                            width: 100%; height: 126px;">
                                             <span><a href="dich-vu-csvc.aspx"><strong>dịch vụ & cơ sở vật chất</strong></a></span>
                                         </div>
                                     </div>
                                     <div class="sub-menubox">
-                                        <div class="menu-box" style="background: url('../assets/images/anhkhachhang.jpg') no-repeat center center; width: 100%; height: 126px;">
+                                        <div class="menu-box" style="background: url('../assets/images/anhkhachhang.jpg') no-repeat center center;
+                                            width: 100%; height: 126px;">
                                             <span><a href="hinh-anh.aspx"><strong>ảnh khách hàng</strong></a></span>
                                         </div>
                                     </div>
                                     <div class="sub-menubox">
-                                        <div class="menu-box" style="background: url('../assets/images/video.jpg') no-repeat center center; width: 100%; height: 126px;">
+                                        <div class="menu-box" style="background: url('../assets/images/video.jpg') no-repeat center center;
+                                            width: 100%; height: 126px;">
                                             <span><a href="video.aspx"><strong>video</strong></a></span>
                                         </div>
                                     </div>
@@ -479,7 +490,7 @@
                                     <div class="mail-input">
                                         <asp:TextBox ID="txtNewLetter" CssClass="mail-text" runat="server"></asp:TextBox>
                                         <asp:TextBoxWatermarkExtender ID="txtNewLetter_WatermarkExtender" runat="server"
-                                            Enabled="True" WatermarkText="Nhập email cua bạn" TargetControlID="txtNewLetter">
+                                            Enabled="True" WatermarkText="Nhập email của bạn" TargetControlID="txtNewLetter">
                                         </asp:TextBoxWatermarkExtender>
                                         <div class="register">
                                             <asp:Button ID="btnNewLetter" CssClass="button-btn" runat="server" Text="ĐĂNG KÝ"

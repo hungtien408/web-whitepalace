@@ -278,7 +278,7 @@
                             <asp:HiddenField ID="hdnOldImagePath" runat="server" Value='<%# Eval("ImagePath") %>' />
                             <asp:HiddenField ID="hdnOldVideoPath" runat="server" Value='<%# Eval("VideoPath") %>' />
                             <table class="search">
-                                <tr class="invisible">
+                                <tr>
                                     <td class="left">
                                         File ảnh
                                     </td>
@@ -287,6 +287,7 @@
                                             Culture="vi-VN" Language="vi-VN" InputSize="70" AllowedFileExtensions=".jpg,.jpeg,.gif,.png" />
                                         <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Sai định dạng ảnh (*.jpg, *.jpeg, *.gif, *.png)"
                                             ClientValidationFunction="validateImage" Display="Dynamic"></asp:CustomValidator>
+                                        <span class="required">(Kích thước 380px x 270px)</span>
                                     </td>
                                 </tr>
                                 <tr>

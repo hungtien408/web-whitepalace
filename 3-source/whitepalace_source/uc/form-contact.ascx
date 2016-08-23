@@ -14,11 +14,14 @@
                                 <script type="text/javascript">
                                     $(document).ready(function () {
                                         jwplayer('jwplayera').setup({
-                                            "image": "",
+                                            image: '<%# string.IsNullOrEmpty(Eval("ImagePath").ToString()) ? "" : "res/video/thumbs/" + Eval("ImagePath") %>',
                                             file: '<%# string.IsNullOrEmpty(Eval("VideoPath").ToString()) ? Eval("GLobalEmbedScript") : "res/video/" + Eval("VideoPath") %>',
                                             flashplayer: "assets/js/jwplayer.flash.swf",
                                             width: '100%',
-                                            aspectratio: '16:9'
+                                            aspectratio: '16:9',
+                                            screencolor: 'FFFFFF',
+                                            backcolor: 'transparent',
+                                            wmode : 'transparent'
                                         });
                                         //jwplayer('jwplayer1').play();
                                     });

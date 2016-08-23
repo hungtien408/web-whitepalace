@@ -113,10 +113,19 @@
                                     <img src="assets/images/follow2.png" alt="" /></a> <a href="#">
                                         <img src="assets/images/follow3.png" alt="" /></a>
                         </div>
-                        <div class="languge">
-                            <asp:ImageButton ID="btnEN2" runat="server" ImageUrl="~/assets/images/languge2.png"
-                                OnClick="btnEN_Click" />
-                        </div>
+                       <div class="languge">
+                              <div id="google_translate_element">
+                                </div>
+                                <script type="text/javascript">
+                                    function googleTranslateElementInit() {
+                                        new google.translate.TranslateElement({ pageLanguage: 'vi' }, 'google_translate_element');
+                                    }
+                                </script>
+                                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            
+                            <%--<asp:ImageButton ID="btnVN2" runat="server" ImageUrl="~/assets/images/languge1.png"
+                                OnClick="btnVN_Click" />--%>
+                            </div>
                         <div class="form-search corner">
                             <asp:Button ID="btnSearch" CssClass="search-btn" runat="server" OnClick="btnSearch_Click" />
                             <div class="search-input">
@@ -225,7 +234,7 @@
                                                                             <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
                                                                         </SelectParameters>
                                                                     </asp:ObjectDataSource>
-                                                                </div>
+                                                                        </div>
                                                                 </div>
                                                             </div>
                                                         </ItemTemplate>
@@ -266,7 +275,7 @@
                                     <asp:ListView ID="lstTechnologyCategory" runat="server" DataSourceID="odsTechnologyCategory"
                                         EnableModelValidation="True">
                                         <ItemTemplate>
-                                            <div class="sub-menubox">
+                                            <div class="sub-menubox sub2-list">
                                                 <div class="menu-box">
                                                     <span><a href="javascript:void(0);"><strong>
                                                         <%# Eval("ProductCategoryName") %></strong></a></span>
@@ -323,7 +332,7 @@
                                                                             <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
                                                                         </SelectParameters>
                                                                     </asp:ObjectDataSource>
-                                                                    </div>
+                                                                        </div>
                                                                 </div>
                                                             </div>
                                                         </ItemTemplate>
@@ -482,7 +491,7 @@
                                     <div class="mail-input">
                                         <asp:TextBox ID="txtNewLetter" CssClass="mail-text" runat="server"></asp:TextBox>
                                         <asp:TextBoxWatermarkExtender ID="txtNewLetter_WatermarkExtender" runat="server"
-                                            Enabled="True" WatermarkText="Nhập email cua bạn" TargetControlID="txtNewLetter">
+                                            Enabled="True" WatermarkText="Nhập email của bạn" TargetControlID="txtNewLetter">
                                         </asp:TextBoxWatermarkExtender>
                                         <div class="register">
                                             <asp:Button ID="btnNewLetter" CssClass="button-btn" runat="server" Text="ĐĂNG KÝ"
