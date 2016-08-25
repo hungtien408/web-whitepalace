@@ -2823,10 +2823,8 @@ body .mobilep-right {
 .sub-menu {
   background-color: rgba(0, 0, 0, 0.85);
   border-top: 5px solid #dea735;
-  left: -475px !important;
   position: absolute;
   top: 55px;
-  width:1100px;
   padding:20px;
 }
 .menu-box {
@@ -2864,7 +2862,6 @@ body .mobilep-right {
 
 .sub-menubox {
  float: left;
-  width: 23.5%;
   margin-right:15px;
 }
 .list-menu {
@@ -2949,7 +2946,7 @@ body .mobilep-right {
   z-index:2;
 }*/
 .sub-menubox:nth-of-type(1) .list-menu-sub {
-    width:333%;
+    width:110%;
      background-color: rgba(136, 106, 50, 1);
   display: none;
   padding-left: 15px;
@@ -2959,11 +2956,10 @@ body .mobilep-right {
   z-index:2;
 }
 .sub-menubox:nth-of-type(1) .list-menu-sub a{
-    width:33.3%;
-    float:left;
+    width:100%;
 }
 .sub-menubox:nth-of-type(2) .list-menu-sub {
-    width:227%;
+    width:110%;
   background-color: rgba(136, 106, 50, 1);
   display: none;
   padding-left: 15px;
@@ -2974,22 +2970,20 @@ body .mobilep-right {
     /*display:block;*/
 }
 .sub-menubox:nth-of-type(2) .list-menu-sub a{
-    width:49.4%;
-    float:left;
+    width:100%;
 }
 .sub-menubox:nth-of-type(3) .list-menu-sub {
   background-color: rgba(136, 106, 50, 1);
   display: none;
   padding-left: 15px;
   position: absolute;
-  right:100%;
+  left:100%;
   top: 0;
   z-index:2;
-  width:220%;
+  width:110%;
 }
 .sub-menubox:nth-of-type(3) .list-menu-sub a{
-    width:49.4%;
-    float:left;
+    width:100%;
 }
 .sub-menubox:nth-of-type(4) .list-menu-sub {
   background-color: rgba(136, 106, 50, 1);
@@ -2999,11 +2993,11 @@ body .mobilep-right {
   right:100%;
   top: 0;
   z-index:2;
-  width:333%;
+  width:110%;
   /*display:block;*/
 }
 .sub-menubox:nth-of-type(4) .list-menu-sub a{
-    width:33.3%;
+    width:110%;
     float:left;
 }
 .sub2-list:nth-of-type(1) .list-menu-sub {
@@ -3042,6 +3036,11 @@ body .mobilep-right {
     left: -220px !important;
     width: 600px;
 }
+.sub1 {
+  left: -475px !important;
+  max-width: 1100px;
+  right: -90%;
+}
 .sub-menu.sub3 {
   left: -120px !important;
   width: 220px;
@@ -3050,6 +3049,10 @@ body .mobilep-right {
 /*.sub-menu.sub3 .menu-box {
   background: none;
 }*/
+.sub1 .sub-menubox {
+    
+  width:270px;
+}
 .sub2 .sub-menubox {
     width:48%;
 }
@@ -3232,6 +3235,6 @@ font-size: 0 !important;
     cursor:pointer;
 }
 .scroll-pane {
-  height: 400px;
+  height: 395px;
   overflow: auto;
 }
