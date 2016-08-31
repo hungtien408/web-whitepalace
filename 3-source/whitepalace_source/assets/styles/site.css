@@ -152,7 +152,7 @@ hr {
     }
 
 #header .hotline {
-  background: rgba(0, 0, 0, 0) url("../images/icon-phone.png") no-repeat scroll left 8px;
+  background: rgba(0, 0, 0, 0) url("../images/icon-phone.png") no-repeat scroll left 2px;
   color: #fff;
   float: right;
   font-size: 14px;

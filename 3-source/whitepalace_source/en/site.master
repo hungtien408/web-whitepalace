@@ -82,6 +82,7 @@
             $('.menu-list li a[href$="' + page + '"]').parents("li").addClass("active");
         }
     </script>
+    <script lang="javascript">        (function () { var pname = ((document.title != '') ? document.title : document.querySelector('h1').innerHTML); var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.src = '//live.vnpgroup.net/js/web_client_box.php?hash=4449e37c54c0fd9d0671355e76c41341&data=eyJzc29faWQiOjQxNDA0OTMsImhhc2giOiIyZDMzNGJhNjM3M2I0NmE5MWUzMDJiNDZjZTk1NjliMCJ9&pname=' + pname; var s = document.getElementsByTagName('script'); s[0].parentNode.insertBefore(ga, s[0]); })();</script>
 </head>
 <body>
     <form id="form1" runat="server">
