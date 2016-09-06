@@ -71,7 +71,7 @@
                 </a>
             </div>--%>
             <div class="news-colmain">
-                <div class="news-colleft desktop-992">
+                <%--<div class="news-colleft desktop-992">
                     <ul class="list-nav">
                         <asp:ListView ID="lstPTHot" runat="server" DataSourceID="odsPTHot" EnableModelValidation="True">
                             <ItemTemplate>
@@ -161,7 +161,7 @@
                             </SelectParameters>
                         </asp:ObjectDataSource>
                     </div>
-                </div>
+                </div>--%>
                 <div class="news-colright">
                     <div class="news-head">
                         <h4>

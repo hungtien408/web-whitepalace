@@ -145,7 +145,7 @@ function myfunload() {
     }
 
     $('.slider-tree1').slick({
-        slidesToShow: 2,
+        slidesToShow: 3,
         rows: 2,
         prevArrow: $(".slidePrevo1"),
         nextArrow: $(".slideNexto1"),

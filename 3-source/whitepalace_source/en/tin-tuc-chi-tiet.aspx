@@ -3,7 +3,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cphColAside" runat="Server">
+<asp:Content ID="Content4" ContentPlaceHolderID="cphColAside1" runat="Server">
+    
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphColAside2" runat="Server">
     <h2 class="title-news text-uppercase">
         <span>Featured news</span></h2>
     <div class="list-news">

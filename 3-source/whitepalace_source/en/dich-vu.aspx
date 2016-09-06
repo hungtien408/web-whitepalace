@@ -8,26 +8,99 @@
         <a id="A1" href="~/" runat="server">Trang chủ </a>/ <a href="phau-thuat-tham-my.aspx">
             Phẫu thuật thẩm mỹ</a>/ <span>Mắt</span>
             </div>--%>
-        <asp:ListView ID="lstBreadcrum" runat="server" DataSourceID="odsBreadcrum" EnableModelValidation="True">
+    <asp:ListView ID="lstBreadcrum" runat="server" DataSourceID="odsBreadcrum" EnableModelValidation="True">
+        <ItemTemplate>
+            <%# Container.DataItemIndex == ((System.Data.DataView)odsBreadcrum.Select()).Count - 1 ? "<span>" + Eval("ProductCategoryName") + "</span>" : "<a href='" + progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" + "'>" + Eval("ProductCategoryName") + "</a>/ "%>
+        </ItemTemplate>
+        <LayoutTemplate>
+            <div id="site-details">
+                <a id="A1" href="~/" runat="server">Trang chủ</a>/ <span runat="server" id="itemPlaceholder" />
+            </div>
+        </LayoutTemplate>
+    </asp:ListView>
+    <asp:ObjectDataSource ID="odsBreadcrum" runat="server" SelectMethod="ProductCategoryHierarchyToTopSelectAll"
+        TypeName="TLLib.ProductCategory">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="CurrentProductCategoryID" QueryStringField="pci"
+                Type="String" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="cphColAside1" runat="Server">
+    <ul class="list-nav">
+        <asp:ListView ID="lstServiceCategory" runat="server" DataSourceID="odsServiceCategory"
+            EnableModelValidation="True">
             <ItemTemplate>
-                <%# Container.DataItemIndex == ((System.Data.DataView)odsBreadcrum.Select()).Count - 1 ? "<span>" + Eval("ProductCategoryName") + "</span>" : "<a href='" + progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" + "'>" + Eval("ProductCategoryName") + "</a>/ "%>
+                <li>
+                    <div class="nav-box">
+                        <div class="hex-box">
+                            <div class="corner-1">
+                                <div class="corner-2">
+                                    <div class="corner-3">
+                                        <div class="nav-in">
+                                            <a href='<%# progressTitle(Eval("ProductCategoryNameEn")) + "-pci-" + Eval("ParentID") + "-pri-" + Eval("ProductCategoryID") + ".aspx" %>'>
+                                                <span class="box-frame"></span>
+                                                <img id="Img1" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/productcategory/" + Eval("ImageName") : "~/assets/images/aside-img-1.png" %>'
+                                                    runat="server" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-content text-uppercase">
+                        <%# Eval("ProductCategoryNameEn") %>
+                    </div>
+                </li>
             </ItemTemplate>
             <LayoutTemplate>
-                <div id="site-details">
-                    <a id="A1" href="~/" runat="server">Trang chủ</a>/ <span runat="server" id="itemPlaceholder" />
-                </div>
+                <span runat="server" id="itemPlaceholder" />
             </LayoutTemplate>
         </asp:ListView>
-        <asp:ObjectDataSource ID="odsBreadcrum" runat="server" SelectMethod="ProductCategoryHierarchyToTopSelectAll"
+        <asp:ObjectDataSource ID="odsServiceCategory" runat="server" SelectMethod="ProductCategorySelectAll"
             TypeName="TLLib.ProductCategory">
             <SelectParameters>
-                <asp:QueryStringParameter Name="CurrentProductCategoryID" QueryStringField="pci"
-                    Type="String" />
+                <asp:QueryStringParameter QueryStringField="pci" Name="parentID" Type="Int32" />
+                <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
+                <asp:Parameter DefaultValue="True" Name="IsShowOnMenu" Type="String" />
+                <asp:Parameter Name="IsShowOnHomePage" Type="String" />
             </SelectParameters>
         </asp:ObjectDataSource>
-    
+    </ul>
+    <div class="aside-hotline">
+        <asp:ListView ID="lstHotline" runat="server" DataSourceID="odsInfo" EnableModelValidation="True">
+            <ItemTemplate>
+                <strong>
+                    <%# Eval("Tag") %></strong>
+            </ItemTemplate>
+            <LayoutTemplate>
+                <span runat="server" id="itemPlaceholder" />
+            </LayoutTemplate>
+        </asp:ListView>
+        <asp:ObjectDataSource ID="odsInfo" runat="server" SelectMethod="ArticleSelectAll"
+            TypeName="TLLib.Article">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+                <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
+                <asp:Parameter Name="Keyword" Type="String" />
+                <asp:Parameter Name="ArticleTitle" Type="String" />
+                <asp:Parameter Name="Description" Type="String" />
+                <asp:Parameter DefaultValue="1" Name="ArticleCategoryID" Type="String" />
+                <asp:Parameter Name="Tag" Type="String" />
+                <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                <asp:Parameter Name="IsHot" Type="String" />
+                <asp:Parameter Name="IsNew" Type="String" />
+                <asp:Parameter Name="FromDate" Type="String" />
+                <asp:Parameter Name="ToDate" Type="String" />
+                <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                <asp:Parameter Name="Priority" Type="String" />
+                <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+            </SelectParameters>
+        </asp:ObjectDataSource>
+    </div>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cphColAside" runat="Server">
+<asp:Content ID="Content3" ContentPlaceHolderID="cphColAside2" runat="Server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphColMain" runat="Server">
     <div class="quick">
@@ -131,6 +204,9 @@
                                 <%# Eval("ProductNameEn") %></a></div>
                         <div class="description">
                             <%# Eval("DescriptionEn") %></div>
+                        <div class="view-detail">
+                            <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
+                                <span class="fa fa-angle-double-right"></span>see more</a></div>
                     </div>
                 </li>
             </ItemTemplate>

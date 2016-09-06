@@ -9,25 +9,66 @@
             Phẫu thuật thẩm mỹ</a>/<a href="dich-vu.aspx">
             Mắt</a>/ <span>
                 <asp:Label ID="lblTitle" runat="server" Text=""></asp:Label></span>--%>
-                <asp:ListView ID="lstBreadcrum" runat="server" DataSourceID="odsBreadcrum" EnableModelValidation="True">
-                <ItemTemplate>
-                    <%# "<a href='" + progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" + "'>" + Eval("ProductCategoryName") + "</a>/ "%>
-                </ItemTemplate>
-                <LayoutTemplate>
-                    <a id="A1" href="~/" runat="server">Trang chủ</a>/ <span runat="server" id="itemPlaceholder" />
-                </LayoutTemplate>
-            </asp:ListView>
-            <asp:ObjectDataSource ID="odsBreadcrum" runat="server" SelectMethod="ProductCategoryHierarchyToTopSelectAll"
-                TypeName="TLLib.ProductCategory">
-                <SelectParameters>
-                    <asp:QueryStringParameter Name="CurrentProductCategoryID" QueryStringField="pci"
-                        Type="String" />
-                </SelectParameters>
-            </asp:ObjectDataSource>
-            <asp:Label ID="lblTitle" runat="server" Text=""></asp:Label>
+        <asp:ListView ID="lstBreadcrum" runat="server" DataSourceID="odsBreadcrum" EnableModelValidation="True">
+            <ItemTemplate>
+                <%# "<a href='" + progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" + "'>" + Eval("ProductCategoryName") + "</a>/ "%>
+            </ItemTemplate>
+            <LayoutTemplate>
+                <a id="A1" href="~/" runat="server">Trang chủ</a>/ <span runat="server" id="itemPlaceholder" />
+            </LayoutTemplate>
+        </asp:ListView>
+        <asp:ObjectDataSource ID="odsBreadcrum" runat="server" SelectMethod="ProductCategoryHierarchyToTopSelectAll"
+            TypeName="TLLib.ProductCategory">
+            <SelectParameters>
+                <asp:QueryStringParameter Name="CurrentProductCategoryID" QueryStringField="pci"
+                    Type="String" />
+            </SelectParameters>
+        </asp:ObjectDataSource>
+        <asp:Label ID="lblTitle" runat="server" Text=""></asp:Label>
     </div>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cphColAside" runat="Server">
+<asp:Content ID="Content5" ContentPlaceHolderID="cphColAside1" runat="Server">
+    <ul class="list-nav">
+        <asp:ListView ID="lstPTSame" runat="server" DataSourceID="odsPTSame" EnableModelValidation="True">
+            <ItemTemplate>
+                <li>
+                    <div class="nav-box">
+                        <div class="hex-box">
+                            <div class="corner-1">
+                                <div class="corner-2">
+                                    <div class="corner-3">
+                                        <div class="nav-in">
+                                            <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
+                                                <span class="box-frame"></span>
+                                                <img id="Img1" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/aside-img-1.png" %>'
+                                                    runat="server" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-content text-uppercase">
+                        <%# Eval("ProductName") %>
+                    </div>
+                </li>
+            </ItemTemplate>
+            <LayoutTemplate>
+                <span runat="server" id="itemPlaceholder" />
+            </LayoutTemplate>
+        </asp:ListView>
+    </ul>
+    <asp:ObjectDataSource ID="odsPTSame" runat="server" SelectMethod="ProductSameSelectAll"
+        TypeName="TLLib.Product">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="10" Name="RerultCount" Type="String" />
+            <asp:QueryStringParameter Name="ProductID" QueryStringField="pi"
+                Type="String" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphColAside2" runat="Server">
     <h2 class="title-news text-uppercase">
         <span>Ảnh khách hàng</span></h2>
     <div class="list-cus">
@@ -58,7 +99,7 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphColMain" runat="Server">
-        <div class="quick">
+    <div class="quick">
         <div class="quick-wrapper">
             <div class="quick_list">
                 <ul>
@@ -70,11 +111,14 @@
                         <img src="assets/images/hinhanh.png" alt="" />hình ảnh</a></li>
                     <li class="q-list-4"><a href="video.aspx">
                         <img src="assets/images/ico-video.png" alt="" />video</a></li>
-                    <li class="q-list q-list-5"><a href="javascript:void(0);"><img src="assets/images/healthy.png" alt="" />CS sau khi điều trị</a></li>
+                    <li class="q-list q-list-5"><a href="javascript:void(0);">
+                        <img src="assets/images/healthy.png" alt="" />CS sau khi điều trị</a></li>
                     <li class="q-list q-list-6"><a href="javascript:void(0);">
                         <img src="assets/images/chi-phi.png" alt="" />giá</a></li>
                     <li class="q-list q-list-7"><a href="tel:0933866661">Hotline
-                        <p>0933 866 661</p></a></li>
+                        <p>
+                            0933 866 661</p>
+                    </a></li>
                 </ul>
             </div>
             <div class="quick_content">
@@ -141,7 +185,6 @@
             </div>
         </div>
     </div>
-
     <asp:ListView ID="lstServiceDetails" runat="server" DataSourceID="odsServiceDetails"
         EnableModelValidation="True">
         <ItemTemplate>

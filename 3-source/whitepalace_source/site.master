@@ -194,7 +194,7 @@
                                                         EnableModelValidation="True">
                                                         <ItemTemplate>
                                                             <div class="list-menu2">
-                                                                <a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'>
+                                                                <a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ParentID") + "-pri-" + Eval("ProductCategoryID") + ".aspx" %>'>
                                                                     <%# Eval("ProductCategoryName") %></a>
                                                                 <div class="list-menu-sub">
                                                                     <div class="scroll-pane">
@@ -290,7 +290,7 @@
                                                         EnableModelValidation="True">
                                                         <ItemTemplate>
                                                             <div class="list-menu2">
-                                                                <a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'>
+                                                                <a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ParentID") + "-pri-" + Eval("ProductCategoryID") + ".aspx" %>'>
                                                                     <%# Eval("ProductCategoryName") %></a>
                                                                 <div class="list-menu-sub">
                                                                     <div class="scroll-pane">

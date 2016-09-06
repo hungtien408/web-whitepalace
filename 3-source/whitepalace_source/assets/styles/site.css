@@ -2694,7 +2694,7 @@ body .mobilep-right {
 }
 .news-colright {
    overflow: hidden;
-   padding-left: 60px;
+   /*padding-left: 60px;*/
    margin-top: 30px;
    margin-bottom: 30px;
    position: relative;
@@ -3237,4 +3237,14 @@ font-size: 0 !important;
 .scroll-pane {
   height: 395px;
   overflow: auto;
+}
+.view-detail {
+    margin:10px 0;
+}
+.view-detail > a {
+  color:#fff;
+  text-decoration:none;
+  padding: 5px 10px;
+  background-color: #dea735 ;
+  border-radius: 10px;
 }
