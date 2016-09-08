@@ -3,8 +3,8 @@
 
 <%@ Register Src="~/uc/form-contact.ascx" TagPrefix="uc1" TagName="formcontact" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <title>WP</title>
-    <meta name="description" content="WP" />
+    <title>Viện Thẩm Mỹ WHITE PALACE</title>
+    <meta name="description" content="Viện Thẩm Mỹ WHITE PALACE" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bannerdefault" runat="Server">
     <asp:ListView ID="lstPopupTop" runat="server" DataSourceID="odsPopupTop" EnableModelValidation="True">
