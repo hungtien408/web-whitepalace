@@ -15,6 +15,7 @@ window.onload = function () {
     // Creating a map
     var options = {
         zoom: 17,
+        scrollwheel: false,// not scroll mouse
         center: new google.maps.LatLng(lat, long),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -26,6 +27,7 @@ window.onload = function () {
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(lat, long),
         map: map,
+        icon: 'assets/images/cursor.png',
         title: 'Click me'
     });
     // Adding a marker

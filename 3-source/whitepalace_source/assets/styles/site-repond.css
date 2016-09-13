@@ -237,6 +237,12 @@
     .service-tb {
         margin: 10px 0;
     }
+    .form-contact .col-md-6 {
+        width: 100% !important;
+    }
+    .form-contact .col-md-6:first-child {
+        border-right: none;
+    }
 }
 /*====Diện=====*/
 @media (max-width: 850px) {
@@ -324,6 +330,9 @@
         width:100%;
         margin-right:0;
         padding:0 10px;
+    }
+    .copyright-bg {
+        text-align: center;
     }
 }
 @media (max-width: 720px) {
