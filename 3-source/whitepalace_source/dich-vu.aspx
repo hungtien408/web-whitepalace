@@ -39,7 +39,7 @@
                                         <div class="nav-in">
                                             <a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ParentID") + "-pri-" + Eval("ProductCategoryID") + ".aspx" %>'>
                                                 <span class="box-frame"></span>
-                                                <img id="Img1" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/productcategory/" + Eval("ImageName") : "~/assets/images/aside-img-1.png" %>'
+                                                <img id="Img1" alt='<%# Eval("ImageNameMenu") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageNameMenu").ToString()) ? "~/res/productcategory/menu/" + Eval("ImageNameMenu") : "~/assets/images/aside-img-1.png" %>'
                                                     runat="server" />
                                             </a>
                                         </div>
