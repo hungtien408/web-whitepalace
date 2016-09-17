@@ -162,6 +162,7 @@ hr {
   line-height: 20px;
   margin-right: 15px;
   padding-left: 50px;
+  margin-top:-5px;
 }
 #header .hotline span {
   color: #dea735;
@@ -883,7 +884,7 @@ body .mobilep-right {
     font-size:25px;
     padding:5px 10px;
     display:block;
-    right:0;
+    left:0;
     top:0;
 }
     .owl-prev:hover, .owl-next:hover {
@@ -897,7 +898,7 @@ body .mobilep-right {
     font-size:25px;
     padding:5px 10px;
     display:block;
-    left:0;
+    right:0;
     top:0;
     }
 .pro-box {
@@ -1015,16 +1016,17 @@ body .mobilep-right {
 }
 
 .service-img::before {
-    width: 280px;
-    height: 280px;
+    width: 270px;
+    height: 270px;
     border-radius: 50%;
     position: absolute;
     content: "";
-    border: 15px solid;
-    border-color: rgba(255,255,255,0.8);
+    /*border-color: rgba(255,255,255,0.8);*/
 }
 
 .service-img {
+    width: 270px;
+    height: 270px;
     position: relative;
     backface-visibility: hidden;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -1033,6 +1035,7 @@ body .mobilep-right {
     transition-duration: 0.3s;
     transition-property: transform;
     vertical-align: middle;
+    padding:20px 0 0 0;
 }
 
     .service-img:hover {
@@ -1044,15 +1047,18 @@ body .mobilep-right {
 }
 
 .service-img img {
+   border: 15px solid rgba(255, 255, 255, 0.8);
     border-radius: 50%;
-    /*width: 100%;*/
-    width: 280px;
-    height: 280px;
+    height: 270px;
+    width: 270px;
 }
-
+.service-main.owl-carousel .owl-item img {
+  display: block;
+  width: 270px;
+}
 .service-name {
     line-height: 30px;
-    margin: 10px 0;
+    margin: 40px 0;
     text-align: center;
 }
 
@@ -3109,7 +3115,33 @@ font-size: 0 !important;
 
 }
 .quick-active {
-    right:0;
+    right:0 !important;
+}
+.quick-arraw {
+    width:55px;
+    height:55px;
+    background:#dea735;
+    position:absolute;
+    top:0;
+    left:-55px;
+    z-index:999;
+}
+.quick-arraw::before {
+    color: #fff;
+    content: "";
+    font-family: "FontAwesome";
+    font-size: 35px;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+.quick-arraw:hover {
+    background:#c38503;
 }
 .quick-wrapper {
     height: 100%;

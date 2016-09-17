@@ -89,6 +89,34 @@ function myfunload() {
             }
         }
     });
+    if ($('#serviceMain').size() == 1) {
+        var silderProduct = $('#serviceMain').imagesLoaded(function () {
+            silderProduct.owlCarousel({
+                margin: 10,
+                loop: true,
+                autoplaySpeed: 3000,
+                margin: 10,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    500: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 4
+                    },
+                }
+            });
+        });
+    }
      if ($('.service-main').size() > 0) {
         var servicemain = $('.service-main').imagesLoaded(function () {
             servicemain.textHeight({
@@ -395,11 +423,45 @@ function mympp() {
 //==================
 
 //== ==//
+$(window).ready(function () {
+    var w = $(window).width();
+    if (w <= 991) {
+        $('.quick-arraw').remove();
+        $('.quick').append('<div class="quick-arraw"></div>');
+
+        $('.quick-arraw').click(function () {
+            $('.quick').addClass('quick_list-active');
+            $(this).css('display', 'none');
+        });
+    }
+    else {
+        $('.quick-arraw').remove();
+    }
+});
+$(document).ready(function () {
+    $(window).resize(function () {
+        var w = $(window).width();
+        if (w <= 991) {
+            $('.quick-arraw').remove();
+            $('.quick').append('<div class="quick-arraw"></div>');
+            $('.quick-arraw').click(function () {
+                $('.quick').addClass('quick_list-active');
+                $(this).css('display', 'none');
+            });
+        }
+        else {
+            $('.quick-arraw').remove();
+        }
+    });
+});
+
 $('.q-list').click(function () {
     $('.quick').addClass('quick-active');
+    $('.quick').removeClass('quick_list-active');
 });
 $('.close_q').click(function () {
     $('.quick').removeClass('quick-active');
+    $('.quick-arraw').css('display', 'block');
 });
 $('.q-list').hover(function () {
     $('.q-list').removeClass('active');
@@ -455,3 +517,4 @@ $(document).resize(function () {
     //alert(hgtmap)
     $('#mapwrap .mapbg .map-wrap').height(hgtmap);
 });
+

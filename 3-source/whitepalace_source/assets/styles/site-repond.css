@@ -244,6 +244,20 @@
         border-right: none;
     }
 }
+@media screen and (max-width:991px) {
+    .quick {
+        width:320px;
+        right: -320px;
+    }
+    .quick_list-active {
+        right:-245px;
+    }
+    .quick_content {
+        width:calc(320px - 75px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 /*====Diện=====*/
 @media (max-width: 850px) {
     .fancybox-close {

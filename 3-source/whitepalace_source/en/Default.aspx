@@ -149,10 +149,10 @@
                     </p>--%>
                     <div class="line-box">
                         <img src="../assets/images/line-box.png" alt="" /></div>
-                    <div class="row">
+                   <div id="serviceMain" class="service-main owl-carousel">
                         <asp:ListView ID="lstServiceHot" runat="server" DataSourceID="odsServiceHot" EnableModelValidation="True">
                             <ItemTemplate>
-                                <div class="col-md-3 col-sm-6 col-xs-6 flip">
+                                <div class="item">
                                     <div class="service-tb">
                                         <a href='<%# progressTitle(Eval("ProductNameEn")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
                                             <div class="service-img">
@@ -174,8 +174,8 @@
                         <asp:ObjectDataSource ID="odsServiceHot" runat="server" SelectMethod="ProductSelectAll"
                             TypeName="TLLib.Product">
                             <SelectParameters>
-                                <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
-                                <asp:Parameter DefaultValue="4" Name="EndRowIndex" Type="String" />
+                                <asp:Parameter Name="StartRowIndex" Type="String" />
+                                <asp:Parameter Name="EndRowIndex" Type="String" />
                                 <asp:Parameter Name="Keyword" Type="String" />
                                 <asp:Parameter Name="ProductName" Type="String" />
                                 <asp:Parameter Name="Description" Type="String" />
