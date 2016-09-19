@@ -1071,7 +1071,7 @@ body .mobilep-right {
         font-family: 'SFUFuturaBook';
         font-size: 22px;
         text-decoration: none;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
     }
 
     .service-name strong {
@@ -1632,6 +1632,7 @@ body .mobilep-right {
     .list-address li span {
         padding-right: 10px;
         color: #dea735;
+        width: 20px;
     }
 
     .list-address a {
@@ -2456,6 +2457,7 @@ body .mobilep-right {
         .about-list ul li p {
             text-align:center;
             font-weight:bold;
+            max-width: 195px;
         }
 .about-img {
     overflow: hidden;
@@ -2494,6 +2496,7 @@ body .mobilep-right {
         font-size:18px;
         padding-bottom:5px;
         width:175px;
+        text-align: center;
     }
     .hotline-box strong {
         font-size:26px;

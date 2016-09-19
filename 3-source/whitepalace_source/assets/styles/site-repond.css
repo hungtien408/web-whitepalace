@@ -613,6 +613,10 @@
     .news-head h4 {
       font-size: 20px;
     }
+    .about-list .about-boxs
+    {
+        margin-left: 0;
+    }
 }
 /*==========Diện======*/
 @media (max-width: 405px) {

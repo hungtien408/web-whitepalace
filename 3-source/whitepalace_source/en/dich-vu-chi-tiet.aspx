@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/en/site-sub.master" AutoEventWireup="true"
     CodeFile="dich-vu-chi-tiet.aspx.cs" Inherits="dich_vu_chi_tiet" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
@@ -69,7 +69,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphColAside2" runat="Server">
     <h2 class="title-news text-uppercase">
-        <span>Ảnh khách hàng</span></h2>
+        <span>Customer Images</span></h2>
     <div class="list-cus">
         <asp:ListView ID="lstImageKH" runat="server" DataSourceID="odsImageKH" EnableModelValidation="True">
             <ItemTemplate>
@@ -109,7 +109,7 @@
                     <li class="q-list-3"><a href="hinh-anh.aspx">
                         <img src="../assets/images/hinhanh.png" alt="" />hình ảnh</a></li>
                     <li class="q-list-4"><a href="video.aspx">
-                        <img src="assets/images/ico-video.png" alt="" />video</a></li>
+                        <img src="../assets/images/ico-video.png" alt="" />video</a></li>
                     <li class="q-list q-list-5"><a href="javascript:void(0);">
                         <img src="../assets/images/healthy.png" alt="" />CS sau khi điều trị</a></li>
                     <li class="q-list q-list-6"><a href="javascript:void(0);">
