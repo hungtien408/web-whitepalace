@@ -1645,15 +1645,18 @@ body .mobilep-right {
 }
 
 .follow {
-    margin-top:40px;
+    /*margin-top:40px;*/
+    margin-top: 20px;
 }
 
 .copyright-bg {
-    padding: 25px 0;
+    /*padding: 25px 0;*/
+    padding: 10px 0;
 }
 
 .copyright {
-    padding-top: 30px;
+    /*padding-top: 30px;*/
+    padding-top: 20px;
 }
 
     .copyright p {
@@ -2482,7 +2485,7 @@ body .mobilep-right {
     display:block;
 }
 .hotline-box {
-    background: rgba(0, 0, 0, 0) url("../images/icon-phone.png") no-repeat scroll left center;
+    background: rgba(0, 0, 0, 0) url("../images/icon-phone.png") no-repeat scroll left 30px;
     border-radius:5px;
     margin: 0 auto;
     padding-left:50px;
@@ -2885,7 +2888,6 @@ body .mobilep-right {
     list-style: none;
     width: 100%;
     display:block;
-    margin-top:10px;
 }
 .list-menu p {
     margin:0;
@@ -2895,13 +2897,16 @@ body .mobilep-right {
     text-decoration: none;
 }
     .list-menu a {
-        background: url(../images/menu-icon2.png) no-repeat left 12px;
+        background: url(../images/menu-icon3.png) no-repeat left 12px;
         padding-left:15px;
         line-height:30px;
         font-size:15px;
         display: block;
         color: #fff;
     }
+    .menu-nav .list-menu a {
+      margin-left: 30px;
+}
 
 .sub-menubox:last-child {
     margin-right:0;
@@ -2938,11 +2943,16 @@ body .mobilep-right {
     font-size:15px;
     padding-left:10px;
 }
+.menu-nav .sub-menubox {
+    width:100% !important;
+    margin-bottom: 15px;
+}
 .menu-nav .menu-box strong {
-    font-weight:normal;
-    font-size:15px;
-    color:#fff;
-    
+  background: rgba(0, 0, 0, 0) url("../images/menu-icon2.png") no-repeat scroll left 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: normal;
+  padding-left: 15px;
 }
 /*===*/
 .servicer-main.list-tab ul li {
@@ -3132,15 +3142,20 @@ font-size: 0 !important;
     left:-55px;
     z-index:999;
 }
+.quick-arraw > p {
+  color: #fff;
+  margin: 5px 0 0;
+  text-align: center;
+}
 .quick-arraw::before {
     color: #fff;
     content: "";
     font-family: "FontAwesome";
-    font-size: 35px;
+    font-size: 25px;
     left: 50%;
     position: absolute;
     text-align: center;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
     -moz-transform: translate(-50%,-50%);
@@ -3289,4 +3304,22 @@ font-size: 0 !important;
   padding: 5px 10px;
   background-color: #dea735 ;
   border-radius: 10px;
+}
+#overlay-screen-active {
+    background: transparent none repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.menu-mobile .languge {
+    float:none;
+    padding-left:0;
+    margin-left:0;
+    position:static;
+    right:0;
+    margin-top:0;
+    text-align:center;
 }

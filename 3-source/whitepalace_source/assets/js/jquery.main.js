@@ -427,11 +427,18 @@ $(window).ready(function () {
     var w = $(window).width();
     if (w <= 991) {
         $('.quick-arraw').remove();
-        $('.quick').append('<div class="quick-arraw"></div>');
-
+        $('.quick').append('<div class="quick-arraw"><p>Chi Phí</p></div>');
         $('.quick-arraw').click(function () {
+            $('#overlay-screen-active').remove();
+            $('#mainContent').append('<div id="overlay-screen-active"></div>');
             $('.quick').addClass('quick_list-active');
             $(this).css('display', 'none');
+        });
+        $(document).on('click', ".close_q, #overlay-screen-active", function () {
+            $('.quick').removeClass('quick_list-active');
+            $('.quick').removeClass('quick-active');
+            $('.quick-arraw').css('display', 'block');
+            return false;
         });
     }
     else {
@@ -443,16 +450,24 @@ $(document).ready(function () {
         var w = $(window).width();
         if (w <= 991) {
             $('.quick-arraw').remove();
-            $('.quick').append('<div class="quick-arraw"></div>');
+            $('.quick').append('<div class="quick-arraw"><p>Chi Phí</p></div>');
             $('.quick-arraw').click(function () {
+                $('#overlay-screen-active').remove();
+                $('#mainContent').append('<div id="overlay-screen-active"></div>');
                 $('.quick').addClass('quick_list-active');
                 $(this).css('display', 'none');
+            });
+            $(document).on('click', ".close_q, #overlay-screen-active", function () {
+                $('.quick').removeClass('quick_list-active');
+                $('.quick').removeClass('quick-active');
+                $('.quick-arraw').css('display', 'block');
+                return false;
             });
         }
         else {
             $('.quick-arraw').remove();
         }
-    });
+    }).resize();
 });
 
 $('.q-list').click(function () {
@@ -518,3 +533,11 @@ $(document).resize(function () {
     $('#mapwrap .mapbg .map-wrap').height(hgtmap);
 });
 
+$(window).load(function () {
+    if ($(window).width() < 460) {
+        $('.languge').insertAfter('.menu-mobile .form-search');
+    }
+    else {
+        $('.languge').insertAfter('.header-follow');
+    }
+});

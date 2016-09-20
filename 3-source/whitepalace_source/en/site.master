@@ -9,6 +9,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
     <link rel="shortcut icon" type="image/ico" href="ico.ico" />
     <link href="../assets/styles/font-awesome.min.css" rel="stylesheet" />
     <link href="../assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -99,16 +101,16 @@
                         <a id="A4" href="~/en/" runat="server">
                             <img class="img-responsive" src="../assets/images/logo-ft.png" alt="logo" /></a>
                     </div>
-                    <div class="languge ipadmo-992">
+                   <%-- <div class="languge ipadmo-992">
                         <asp:ImageButton ID="btnVN" runat="server" ImageUrl="~/assets/images/languge1.png"
                             OnClick="btnVN_Click" />
-                    </div>
+                    </div>--%>
                     <div class="logo desktop-992">
                         <a id="A1" href="~/en/" runat="server">
                             <img class="img-responsive" src="../assets/images/logo-ft.png" alt="logo" /></a>
                     </div>
-                    <div class="header-top desktop-992">
-                        <div class="header-follow">
+                    <div class="header-top">
+                        <div class="header-follow desktop-992">
                             <a href="#">
                                 <img src="../assets/images/follow1.png" alt="" /></a> <a href="#">
                                     <img src="../assets/images/follow2.png" alt="" /></a> <a href="#">
@@ -126,7 +128,7 @@
                             <%--<asp:ImageButton ID="btnVN2" runat="server" ImageUrl="~/assets/images/languge1.png"
                                 OnClick="btnVN_Click" />--%>
                         </div>
-                        <div class="form-search corner">
+                        <div class="form-search corner desktop-992">
                             <asp:Button ID="btnSearch" CssClass="search-btn" runat="server" OnClick="btnSearch_Click" />
                             <div class="search-input">
                                 <asp:TextBox ID="txtSearch" runat="server" CssClass="search-text"></asp:TextBox>
@@ -135,9 +137,9 @@
                                 </asp:TextBoxWatermarkExtender>
                             </div>
                         </div>
-                        <div class="header-contact">
+                        <div class="header-contact desktop-992">
                             <a href="lien-he.aspx">Contact</a></div>
-                        <div class="hotline">
+                        <div class="hotline desktop-992">
                             <asp:ListView ID="lstInfo" runat="server" DataSourceID="odsInfo" EnableModelValidation="True">
                                 <ItemTemplate>
                                     <p>
@@ -435,6 +437,30 @@
                                         </div>
                                     </div>
                                 </div>
+                                 <div class="contact register-bg">
+                                    <h4>
+                                        Đăng ký nhận mail</h4>
+                                    <h3>
+                                        HÃY ĐĂNG KÝ NHẬN TIN NGAY</h3>
+                                    <p>
+                                        Để nhận bản tin về các chương trình Khuyến Mãi hấp dẫn.</p>
+                                </div>
+                                 <div class="mail-input">
+                                        <asp:TextBox ID="txtNewLetter" CssClass="mail-text" runat="server"></asp:TextBox>
+                                        <asp:TextBoxWatermarkExtender ID="txtNewLetter_WatermarkExtender" runat="server"
+                                            Enabled="True" WatermarkText="Nhập email của bạn" TargetControlID="txtNewLetter">
+                                        </asp:TextBoxWatermarkExtender>
+                                        <div class="register">
+                                            <asp:Button ID="btnNewLetter" CssClass="button-btn" runat="server" Text="ĐĂNG KÝ"
+                                                OnClick="btnNewLetter_Click" ValidationGroup="SendNewLetter" /></div>
+                                        <asp:RegularExpressionValidator CssClass="lb-error" ID="RegularExpressionValidator1"
+                                            runat="server" ValidationGroup="SendNewLetter" ControlToValidate="txtNewLetter"
+                                            ErrorMessage="Email is error!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                                            Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
+                                        <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator2" runat="server"
+                                            ValidationGroup="SendNewLetter" ControlToValidate="txtNewLetter" ErrorMessage="Information required!"
+                                            Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    </div>
                             </div>
                             <div class="col-md-8 row">
                                 <div class="col-md-6">
@@ -480,30 +506,26 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="contact register-bg">
+                                     <div class="contact">
                                         <h4>
-                                            Đăng ký nhận mail</h4>
-                                        <h3>
-                                            HÃY ĐĂNG KÝ NHẬN TIN NGAY</h3>
-                                        <p>
-                                            Để nhận bản tin về các chương trình Khuyến Mãi hấp dẫn.</p>
+                                            USA</h4>
+                                        <asp:ListView ID="ListView2" runat="server" DataSourceID="odsInfo" EnableModelValidation="True">
+                                            <ItemTemplate>
+                                                <ul class="list-address">
+                                                    <li><span class="fa fa-phone"></span>
+                                                        <%# Eval("MetaTittleEn")%></li>
+                                                    <li><span class="fa fa-envelope"></span><a target="_top" href='<%# "mailto:" + Eval("MetaDescriptionEn") %>'>
+                                                        <%# Eval("MetaDescriptionEn")%></a></li>
+                                                    <li><span class="fa fa-map-marker"></span>
+                                                        <%# Eval("ArticleTitleEn")%></li>
+                                                </ul>
+                                            </ItemTemplate>
+                                            <LayoutTemplate>
+                                                <span runat="server" id="itemPlaceholder" />
+                                            </LayoutTemplate>
+                                        </asp:ListView>
                                     </div>
-                                    <div class="mail-input">
-                                        <asp:TextBox ID="txtNewLetter" CssClass="mail-text" runat="server"></asp:TextBox>
-                                        <asp:TextBoxWatermarkExtender ID="txtNewLetter_WatermarkExtender" runat="server"
-                                            Enabled="True" WatermarkText="Nhập email của bạn" TargetControlID="txtNewLetter">
-                                        </asp:TextBoxWatermarkExtender>
-                                        <div class="register">
-                                            <asp:Button ID="btnNewLetter" CssClass="button-btn" runat="server" Text="ĐĂNG KÝ"
-                                                OnClick="btnNewLetter_Click" ValidationGroup="SendNewLetter" /></div>
-                                        <asp:RegularExpressionValidator CssClass="lb-error" ID="RegularExpressionValidator1"
-                                            runat="server" ValidationGroup="SendNewLetter" ControlToValidate="txtNewLetter"
-                                            ErrorMessage="Email is error!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                                            Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
-                                        <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator2" runat="server"
-                                            ValidationGroup="SendNewLetter" ControlToValidate="txtNewLetter" ErrorMessage="Information required!"
-                                            Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-                                    </div>
+                                   
                                 </div>
                                 <div class="col-md-6">
                                     <div id="mapshow">

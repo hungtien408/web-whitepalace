@@ -9,6 +9,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
     <link rel="shortcut icon" type="image/ico" href="ico.ico" />
     <link href="assets/styles/font-awesome.min.css" rel="stylesheet" />
     <link href="assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -99,16 +101,24 @@
                         <a id="A4" href="~/" runat="server">
                             <img class="img-responsive" src="assets/images/logo-ft.png" alt="logo" /></a>
                     </div>
-                    <div class="languge ipadmo-992">
-                        <asp:ImageButton ID="btnEN" runat="server" ImageUrl="~/assets/images/languge2.png"
-                            OnClick="btnEN_Click" />
-                    </div>
+                   <%-- <div class="languge ipadmo-992">
+                       <div id="google_translate_element_1">
+                            </div>
+                            <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({ pageLanguage: 'vi' }, 'google_translate_element');
+                                }
+                            </script>
+                            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            <asp:ImageButton ID="btnVN2" runat="server" ImageUrl="~/assets/images/languge1.png"
+                                OnClick="btnVN_Click" />
+                    </div>--%>
                     <div class="logo desktop-992">
                         <a id="A1" href="~/" runat="server">
                             <img class="img-responsive" src="assets/images/logo-ft.png" alt="logo" /></a>
                     </div>
-                    <div class="header-top desktop-992">
-                        <div class="header-follow">
+                    <div class="header-top">
+                        <div class="header-follow desktop-992">
                             <a href="#">
                                 <img src="assets/images/follow1.png" alt="" /></a> <a href="#">
                                     <img src="assets/images/follow2.png" alt="" /></a> <a href="#">
@@ -126,7 +136,7 @@
                             <%--<asp:ImageButton ID="btnVN2" runat="server" ImageUrl="~/assets/images/languge1.png"
                                 OnClick="btnVN_Click" />--%>
                         </div>
-                        <div class="form-search corner">
+                        <div class="form-search corner desktop-992">
                             <asp:Button ID="btnSearch" CssClass="search-btn" runat="server" OnClick="btnSearch_Click" />
                             <div class="search-input">
                                 <asp:TextBox ID="txtSearch" runat="server" CssClass="search-text"></asp:TextBox>
@@ -135,9 +145,9 @@
                                 </asp:TextBoxWatermarkExtender>
                             </div>
                         </div>
-                        <div class="header-contact">
+                        <div class="header-contact desktop-992">
                             <a href="lien-he.aspx">LIÊN HỆ</a></div>
-                        <div class="hotline">
+                        <div class="hotline desktop-992">
                             <asp:ListView ID="lstInfo" runat="server" DataSourceID="odsInfo" EnableModelValidation="True">
                                 <ItemTemplate>
                                     <p>
@@ -536,7 +546,7 @@
             </div>
         </div>
         <%--<!--end footer-->--%>
-    </div>
+   
     <!--menumobile-->
     <div id="menumobile" class="mobile-panel mobilep-left">
         <%--<div class="close-menu"><a href="#menumobile" class="glyphicon glyphicon-remove-circle">close</a></div>--%>
@@ -582,6 +592,7 @@
             </div>
         </div>
     </div>
+ </div>
     <!--menumobile-->
     <asp:ContentPlaceHolder ID="cphOverplay" runat="server">
     </asp:ContentPlaceHolder>

@@ -243,6 +243,18 @@
     .form-contact .col-md-6:first-child {
         border-right: none;
     }
+   .quick_list{
+        height: 417px;
+    }
+   .form-contact {
+      background: #dea735 url("../images/bg-video.png") no-repeat scroll 0 0;
+      padding: 18px 0;
+    }
+   .languge {
+      line-height: 0;
+      position: absolute;
+      right: 20px;
+    }
 }
 @media screen and (max-width:991px) {
     .quick {
@@ -449,7 +461,7 @@
         line-height:50px;
     }
     .languge {
-    line-height: 50px;
+        margin-top:0;
 }
       .text-name {
         font-size:20px;
@@ -532,6 +544,14 @@
     }
 }
 /*=======*/
+@media (max-width: 461px) {
+    .languge {
+        display:none;
+    }
+    .menu-mobile .languge {
+     display:block
+    }
+}
 @media (max-width: 480px)
 {
     .contact.register-bg {
@@ -616,6 +636,12 @@
     .about-list .about-boxs
     {
         margin-left: 0;
+    }
+    #header .header-top {
+        margin-top:0;
+    }
+    .languge {
+        line-height:0;
     }
 }
 /*==========Diện======*/
